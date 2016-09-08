@@ -1,19 +1,21 @@
 package ma223ku_assign1;
 
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Scanner;
 
 /**
  * Created by marti on 2016-09-08.
  */
 public class Histogram
 {
-    static String textcontent,_filepath;
-    static char currentCharacter;
+    static Scanner _scanner;
+    static private String _filepath;
 
-    static int onetohundred,hundredplus = 0;
+    static private int onetohundred,hundredplus,currentnumber;
 
-    static String one,ten,twenty,thirty,forthy,fifthy,sixthy,seventy,eighty,ninty,hundred = "";
+    static private String one = "",ten = "",twenty = "",thirty = "",forthy = "",fifthy = "",sixthy = "",seventy = "",eighty = "",ninty = "",hundred = "";
 
     public static void main(String[] args)
     {
@@ -27,64 +29,65 @@ public class Histogram
             {
                 throw new IllegalArgumentException();
             }
-            textcontent = new String(Files.readAllBytes(Paths.get(_filepath)));
-
-            for (int i = 0; i < textcontent.length(); i++)
+            File file = new File(_filepath);
+            _scanner = new Scanner(file);
+            while(_scanner.hasNext())
             {
-                currentCharacter = textcontent.charAt(i);
-                if(Character.isDigit(currentCharacter))
+                if(_scanner.hasNextInt())
                 {
-                    if(currentCharacter > 1 && currentCharacter < 11)
+                    currentnumber = _scanner.nextInt();
+                    System.out.println(currentnumber);
+                    if(currentnumber > 1 && currentnumber < 11)
                     {
                         one +="*";
                         onetohundred += 1;
                     }
-                    else if(currentCharacter > 10 && currentCharacter < 21)
+                    else if(currentnumber > 10 && currentnumber < 21)
                     {
                         ten +="*";
                         onetohundred += 1;
                     }
-                    else if(currentCharacter > 20 && currentCharacter < 31)
+                    else if(currentnumber > 20 && currentnumber < 31)
                     {
                         twenty +="*";
                         onetohundred += 1;
                     }
-                    else if(currentCharacter > 30 && currentCharacter < 41)
+                    else if(currentnumber > 30 && currentnumber < 41)
                     {
                         thirty +="*";
                         onetohundred += 1;
                     }
-                    else if(currentCharacter > 40 && currentCharacter < 51)
+                    else if(currentnumber > 40 && currentnumber < 51)
                     {
                         forthy +="*";
                         onetohundred += 1;
                     }
-                    else if(currentCharacter > 50 && currentCharacter < 61)
+                    else if(currentnumber > 50 && currentnumber < 61)
                     {
                         fifthy +="*";
                         onetohundred += 1;
                     }
-                    else if(currentCharacter > 60 && currentCharacter < 71)
+                    else if(currentnumber > 60 && currentnumber < 71)
                     {
                         sixthy +="*";
                         onetohundred += 1;
                     }
-                    else if(currentCharacter > 70 && currentCharacter < 81)
+                    else if(currentnumber > 70 && currentnumber < 81)
                     {
                         seventy +="*";
                         onetohundred += 1;
                     }
-                    else if(currentCharacter > 80 && currentCharacter < 91)
+                    else if(currentnumber > 80 && currentnumber < 91)
                     {
                         eighty +="*";
                         onetohundred += 1;
                     }
-                    else if(currentCharacter > 90 && currentCharacter < 101)
+                    else if(currentnumber > 90 && currentnumber < 101)
                     {
                         ninty +="*";
                         onetohundred += 1;
                     }
-                    else if(currentCharacter > 100 && currentCharacter < 201)
+                    else if(currentnumber > 100 && currentnumber < 201)
                     {
                         hundred +="*";
                         hundredplus += 1;
