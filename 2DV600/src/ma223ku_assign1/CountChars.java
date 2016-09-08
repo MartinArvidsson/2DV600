@@ -2,6 +2,7 @@ package ma223ku_assign1;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.InvalidParameterException;
 import java.util.Scanner;
 
 /**
@@ -9,13 +10,11 @@ import java.util.Scanner;
  */
 public class CountChars
 {
-    static Scanner scanner = new Scanner(System.in);
     static int upperCases;
     static int lowerCases;
     static int whitespaces;
     static int others;
     static int numbers;
-    static String currentline;
     static char currentCharacter;
     static String _filepath = "";
     static String textcontent;
@@ -31,7 +30,7 @@ public class CountChars
             }
             else
             {
-                //Exception?
+                throw new IllegalArgumentException();
             }
             textcontent = new String(Files.readAllBytes(Paths.get(_filepath)));
 
