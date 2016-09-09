@@ -48,35 +48,35 @@ public class Fraction
 
     }
     //Formula to use: http://www.calculatorsoup.com/calculators/math/fractions.php
-    public int add(Fraction _f)
+    public Fraction add(Fraction _f)
     {
 
-        return (_f.getNumerator()*this.getDenomiator() + this.getNumerator()*_f.getDenomiator()) / (_f.getDenomiator()*this.getDenomiator());
+        return new Fraction((_f.getNumerator()*this.getDenomiator() + this.getNumerator()*_f.getDenomiator()) , (_f.getDenomiator()*this.getDenomiator()));
 
     }
 
-    public int subtract()
+    public Fraction subtract(Fraction _f)
     {
-        return 0;
+        return new Fraction ((this.getNumerator()*_f.getDenomiator() - _f.getNumerator()*this.getDenomiator()) , (this.getDenomiator()*_f.getDenomiator()));
     }
 
-    public int multiply()
+    public Fraction multiply(Fraction _f)
     {
-        return 0;
+        return new Fraction((_f.getNumerator()*this.getNumerator()) , (_f.getDenomiator()*this.getDenomiator()));
     }
 
-    public int divide()
+    public Fraction divide(Fraction _f)
     {
-        return 0;
+        return new Fraction((_f.getNumerator()*this.getDenomiator()) , (_f.getDenomiator()*this.getNumerator()));
     }
 
-    public int isEqualTo()
+    public boolean isEqualTo(Fraction _f)
     {
-        return 0;
+        return (double)_f.getNumerator()/_f.getDenomiator() == (double)this.getNumerator()/this.getDenomiator();
     }
 
     public String toString()
     {
-        return getNumerator()+" / "+getDenomiator();
+        return this.getNumerator()+" / "+ this.getDenomiator();
     }
 }
