@@ -13,6 +13,22 @@ public class Queue implements QueueInterface
     private Node head;
     private Node tail;
 
+    public void enqueue(Object element)
+    {
+        //Used some code from the presentationslides (23/27)
+        if(head == null)
+        {               //If no elements exist, create one thats both head and tail.
+            head = new Node(element);
+            tail = head;
+        }
+        else
+        {
+            tail.setNextNode(new Node(element));
+            tail = tail.getNextNode();
+        }
+        size++;
+    }
+
     public int size()
     {
         return size;
@@ -20,31 +36,16 @@ public class Queue implements QueueInterface
 
     public boolean isEmpty()
     {
-        return size() == 0; //If value returned by size() is equal to 0 returns true else false
+        return size() == 0;
     }
 
-    public void enqueue(Object element)
-    {
-        //Used some code from the presentationslides (23/27)
-        if(head == null)
-        {
-            head = new Node(element);
-            tail = head;
-        }
-        else
-        {
-            tail.setNextNode(new Node(element));
-            tail.getNextNode();
-        }
-    }
-
-    public Object dequeue() throws IndexOutOfBoundsException
+    public Object dequeue()
     {
         if(head != null)
         {
             Node _toRemove = head; //Object to remove
             head =_toRemove.getNextNode(); //Gets node next to the node to remove
-            size--; //Reduces the size therefore removing the first object(Old head)
+            size--; //Reduces the size therefore removing the first object
             return _toRemove.getObject(); //Returns the object that got removed, I think this is what's supposed to be removed
 
         }
@@ -54,7 +55,7 @@ public class Queue implements QueueInterface
         }
     }
 
-    public Object first() throws IndexOutOfBoundsException
+    public Object first()
     {
         if(head != null)
         {
@@ -66,9 +67,9 @@ public class Queue implements QueueInterface
         }
     }
 
-    public Object last() throws IndexOutOfBoundsException
+    public Object last()
     {
-        if(head != null)
+        if (head != null)
         {
             return tail.getObject();
         }

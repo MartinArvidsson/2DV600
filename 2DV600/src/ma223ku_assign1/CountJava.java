@@ -13,7 +13,7 @@ public class CountJava
     static File[] filedirectory;
     static File _file;
     static int i,filelines;
-    public static void main(String[] args)
+    public static void main(String[] args)//Add path in program arguments
     {
         try
         {

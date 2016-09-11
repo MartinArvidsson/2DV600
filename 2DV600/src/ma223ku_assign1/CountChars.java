@@ -24,7 +24,7 @@ public class CountChars
     {
         try
         {
-            if(args[0].toString() != null)
+            if(args[0].toString() != null)//Add path in program arguments
             {
                 _filepath = args[0];
             }

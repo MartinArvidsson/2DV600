@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class CountDigits
 {
-    public static void main(String[] args)
+    public static void main(String[] args)//Add path in program arguments
     {
         Scanner scan = new Scanner(System.in);
         int userinput;
