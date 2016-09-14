@@ -1,5 +1,8 @@
-package ma223ku_assign2.ma223ku_assign2_Exercise1.da1031;
+package ma223ku_assign2.Exercise_1;
 
+
+import ma223ku_assign2.Exercise_1.da1031.AbstractIntCollection;
+import ma223ku_assign2.Exercise_1.da1031.IntList;
 
 /**
  * Created by Martin on 2016-09-14.

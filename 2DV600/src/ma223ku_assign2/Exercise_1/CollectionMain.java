@@ -1,4 +1,4 @@
-package ma223ku_assign2.ma223ku_assign2_Exercise1.da1031;
+package ma223ku_assign2.Exercise_1;
 
 /**
  * Created by Martin on 2016-09-14.

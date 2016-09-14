@@ -4,7 +4,7 @@
  * Author: Jonas Lundberg
  */
 
-package ma223ku_assign2.ma223ku_assign2_Exercise1.da1031;
+package ma223ku_assign2.Exercise_1.da1031;
 
 import java.lang.IndexOutOfBoundsException;
 
