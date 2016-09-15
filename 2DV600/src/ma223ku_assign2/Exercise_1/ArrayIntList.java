@@ -1,12 +1,10 @@
 package ma223ku_assign2.Exercise_1;
 
-
-import ma223ku_assign2.Exercise_1.da1031.AbstractIntCollection;
-import ma223ku_assign2.Exercise_1.da1031.IntList;
-
 /**
  * Created by Martin on 2016-09-14.
  */
+import ma223ku_assign2.Exercise_1.da1031.AbstractIntCollection;
+import ma223ku_assign2.Exercise_1.da1031.IntList;
 
 public class ArrayIntList extends AbstractIntCollection implements IntList
 {

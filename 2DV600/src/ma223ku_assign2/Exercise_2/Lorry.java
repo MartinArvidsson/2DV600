@@ -3,10 +3,22 @@ package ma223ku_assign2.Exercise_2;
 /**
  * Created by Martin on 2016-09-14.
  */
-public class Lorry
+public class Lorry extends Vehicle
 {
-    public Lorry()
+    private int maximumPassengers = 2;
+    public Lorry(int passengers)
     {
-
+        if(passengers <= maximumPassengers)
+        {
+            setSpace(8);
+            setCostperP(15);
+            setCostpervehicle(300);
+            setNumberofPassengers(passengers);
+            setVehicleType("Lorry");
+        }
+        else
+        {
+            throw new IndexOutOfBoundsException();
+        }
     }
 }

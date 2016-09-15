@@ -1,19 +1,67 @@
 package ma223ku_assign2.Exercise_2;
 
-/**
- * Created by Martin on 2016-09-14.
- */
-public interface Ferry extends Iterable<Vehicle>
-{
-    int countPassengers();             // Number of passengers on board
-    int countVehicleSpace();           // Used vehicle space. One car is 1.
-    int countMoney();                  // Earned money
-    void embark(Vehicle v);            // Embark vehicle, warning if not enough space
-    void embark(Passenger p);          // Embark passenger, warning if not enough room
-    void disembark();                  // Clear (empty) ferry. The money earned remains,
-    // i.e., is not reset to zero
-    boolean hasSpaceFor(Vehicle v);    // true if we can embark vehicle v
-    boolean hasRoomFor(Passenger p);   // true if we can embark passenger p
-    String toString();                 // Nice looking ferry status print out
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
+/**
+ * Created by marti on 2016-09-15.
+ */
+public class Ferry implements IFerry
+{
+    private int moneyEarned;
+    private int maximumPassengers;
+    private int maximumVehicles;
+    private ArrayList<Passenger> totalpassengers;
+    private ArrayList<Vehicle> totalVehicle;
+
+    public int countPassengers()
+    {
+        return totalpassengers.size();
+    }
+
+    public int countVehicleSpace()
+    {
+        return 0;
+    }
+
+    public int countMoney()
+    {
+        return 0;
+    }
+
+    public void embark(Vehicle v)
+    {
+
+    }
+
+    public void embark(Passenger p)
+    {
+
+    }
+
+    public void disembark()
+    {
+
+    }
+
+    public boolean hasSpaceFor(Vehicle v)
+    {
+        return true;
+    }
+
+    public boolean hasRoomFor(Passenger p)
+    {
+        return true;
+    }
+
+    public String toString()
+    {
+        return "Not yet implemented";
+    }
+
+    public Iterator<Vehicle> iterator()
+    {
+        return null;
+    }
 }
