@@ -9,35 +9,58 @@ import java.util.List;
  */
 public class Ferry implements IFerry
 {
-    private int moneyEarned;
-    private int maximumPassengers;
-    private int maximumVehicles;
+    private int moneyEarned = 0;
+    private int maximumPassengers = 200;
+    private int maximumVehicleSpace = 40;
+    private int currentSpace;
     private ArrayList<Passenger> totalpassengers;
     private ArrayList<Vehicle> totalVehicle;
+    private List<Passenger> _passengers;
+
+    public Ferry()
+    {
+        totalpassengers = new ArrayList<>();
+        totalVehicle = new ArrayList<>();
+    }
 
     public int countPassengers()
     {
+
         return totalpassengers.size();
     }
 
     public int countVehicleSpace()
     {
-        return 0;
+        return currentSpace;
     }
 
     public int countMoney()
     {
-        return 0;
+        return moneyEarned;
     }
 
     public void embark(Vehicle v)
     {
-
+        if(!totalVehicle.contains(v) && Math.ceil(currentSpace + v.getSpace()) <= maximumVehicleSpace)
+        {
+            totalVehicle.add(v);
+            currentSpace += v.getSpace();
+            moneyEarned += v.getCostpervehicle();
+            v.passengerlist();
+            _passengers = v.getPassengerList();
+            for (int i = 0; i < _passengers.size(); i++)
+            {
+                embark(_passengers.get(i));
+            }
+        }
     }
 
     public void embark(Passenger p)
     {
-
+        if(!totalpassengers.contains(p))
+        {
+            totalpassengers.add(p);
+        }
     }
 
     public void disembark()

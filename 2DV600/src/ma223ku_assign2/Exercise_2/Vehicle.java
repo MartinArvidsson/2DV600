@@ -1,5 +1,7 @@
 package ma223ku_assign2.Exercise_2;
 
+import java.util.List;
+
 /**
  * Created by Martin on 2016-09-14.
  */
@@ -10,7 +12,7 @@ public class Vehicle
     protected int costperpassenger;
     protected int costpervehicle;
     protected String typeofvehicle;
-
+    protected List<Passenger> passengersInVehicle;
 
     public void setSpace(double _space)
     {
@@ -35,6 +37,24 @@ public class Vehicle
     public void setVehicleType(String _typeofvehicle)
     {
         typeofvehicle = _typeofvehicle;
+    }
+
+    public void passengerlist()
+    {
+        for (int i = 0; i < getTotalpassengers(); i++)
+        {
+            passengersInVehicle.add(new Passenger(getCostperpassenger()));
+        }
+    }
+
+    public double getSpace()
+    {
+        return space;
+    }
+
+    public List<Passenger> getPassengerList()
+    {
+        return passengersInVehicle;
     }
 
     public int getTotalpassengers()
