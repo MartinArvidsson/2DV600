@@ -9,14 +9,22 @@ public class FerrySimulation
     {
         Ferry ferry = new Ferry();
 
+
         //Add 3 of cars,Busses and Bicycles
-        for (int i = 0; i < 3; i++)
+        try
         {
-            ferry.embark(new Car(1));
-//            ferry.embark(new Bicycle(1));
-//            ferry.embark(new Bus(20));
+            for (int i = 0; i < 3; i++)
+            {
+                ferry.embark(new Car(1));
+                ferry.embark(new Bicycle(1));
+                ferry.embark(new Bus(20));
+            }
+            System.out.println(ferry.toString());
+        }
+        catch (Exception e)
+        {
+            System.err.print(e.getMessage());
         }
 
-        System.out.println(ferry.toString());
     }
 }

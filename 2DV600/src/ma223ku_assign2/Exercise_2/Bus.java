@@ -18,7 +18,7 @@ public class Bus extends Vehicle
         }
         else
         {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Too many passengers in the bus");
         }
     }
 }

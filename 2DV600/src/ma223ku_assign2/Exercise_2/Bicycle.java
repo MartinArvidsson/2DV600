@@ -18,7 +18,7 @@ public class Bicycle extends Vehicle
         }
         else
         {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Too many passengers on the bicyle");
         }
     }
 }

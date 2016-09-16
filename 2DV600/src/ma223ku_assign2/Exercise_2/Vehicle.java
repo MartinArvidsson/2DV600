@@ -42,6 +42,7 @@ public class Vehicle
 
     List<Passenger> getPassengerList()
     {
+        passengersInVehicle.clear();
         for (int i = 0; i < getTotalpassengers(); i++)
         {
             passengersInVehicle.add(new Passenger(getCostperpassenger()));
