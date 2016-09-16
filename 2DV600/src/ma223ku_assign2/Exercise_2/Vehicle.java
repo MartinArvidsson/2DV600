@@ -1,5 +1,6 @@
 package ma223ku_assign2.Exercise_2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,72 +8,68 @@ import java.util.List;
  */
 public class Vehicle
 {
-    protected double space;
-    protected int totalpassengers;
-    protected int costperpassenger;
-    protected int costpervehicle;
-    protected String typeofvehicle;
-    protected List<Passenger> passengersInVehicle;
+    private double space;
+    private int totalpassengers;
+    private int costperpassenger;
+    private int costpervehicle;
+    private String typeofvehicle;
+    private ArrayList<Passenger> passengersInVehicle = new ArrayList<>();
 
-    public void setSpace(double _space)
+    void setSpace(double _space)
     {
         space = _space;
     }
 
-    public void setNumberofPassengers(int _totalpassengers)
+    void setNumberofPassengers(int _totalpassengers)
     {
         totalpassengers = _totalpassengers;
     }
 
-    public void setCostperP(int _costperpassenger)
+    void setCostperP(int _costperpassenger)
     {
         costperpassenger = _costperpassenger;
     }
 
-    public void setCostpervehicle(int _costpervehicle)
+    void setCostpervehicle(int _costpervehicle)
     {
         costpervehicle = _costpervehicle;
     }
 
-    public void setVehicleType(String _typeofvehicle)
+    void setVehicleType(String _typeofvehicle)
     {
         typeofvehicle = _typeofvehicle;
     }
 
-    public void passengerlist()
+    List<Passenger> getPassengerList()
     {
         for (int i = 0; i < getTotalpassengers(); i++)
         {
             passengersInVehicle.add(new Passenger(getCostperpassenger()));
         }
+        return passengersInVehicle;
     }
 
-    public double getSpace()
+    double getSpace()
     {
         return space;
     }
 
-    public List<Passenger> getPassengerList()
-    {
-        return passengersInVehicle;
-    }
-
-    public int getTotalpassengers()
+    int getTotalpassengers()
     {
         return totalpassengers;
     }
 
-    public int getCostperpassenger()
+    int getCostperpassenger()
     {
         return costperpassenger;
     }
 
-    public int getCostpervehicle()
+    int getCostpervehicle()
     {
         return costpervehicle;
     }
 
-    public String getTypeofvehicle()
+    String getTypeofvehicle()
     {
         return typeofvehicle;
     }

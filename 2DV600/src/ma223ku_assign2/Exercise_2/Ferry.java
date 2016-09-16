@@ -43,7 +43,6 @@ public class Ferry implements IFerry
     {
         if(!totalVehicle.contains(v) && hasSpaceFor(v))
         {
-            v.passengerlist();
             _passengers = v.getPassengerList();
             totalVehicle.add(v);
             currentSpace += v.getSpace();
@@ -61,14 +60,14 @@ public class Ferry implements IFerry
         if(!totalpassengers.contains(p))
         {
             totalpassengers.add(p);
-            maximumPassengers += 1;
             moneyEarned += p.getPassengerCost();
         }
     }
     @Override
     public void disembark()
     {
-
+        totalVehicle.clear();
+        totalpassengers.clear();
     }
     @Override
     public boolean hasSpaceFor(Vehicle v)
@@ -90,10 +89,26 @@ public class Ferry implements IFerry
         return false;
 
     }
+
     @Override
     public String toString()
     {
-        return "Not yet implemented";
+        Iterator<Vehicle> iterator = totalVehicle.iterator();
+        String ferryInformation = "Ferry: " +
+                "\n Current Passengers : " + totalpassengers.size() + " of : " + maximumPassengers +
+                "\n Current Vehiclespace : " + totalVehicle.size() + " of : " + maximumVehicleSpace +
+                "\n Money earned : " + moneyEarned + " kr. \n\n" +
+                "Information about all vehicles \n";
+        while (iterator.hasNext())
+        {
+            Vehicle _v = iterator.next();
+            ferryInformation += "Type : " + _v.getTypeofvehicle() + "\n" +
+                    "Space taken : " + _v.getSpace() + "\n" +
+                    "Passengers in Vehicle : " + _v.getTotalpassengers() + "\n" +
+                    "Passenger cost : " + _v.getCostperpassenger() + "\n";
+        }
+
+        return ferryInformation;
     }
     @Override
     public Iterator<Vehicle> iterator()
