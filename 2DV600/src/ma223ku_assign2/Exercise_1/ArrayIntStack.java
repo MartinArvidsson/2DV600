@@ -9,12 +9,9 @@ import ma223ku_assign2.Exercise_1.da1031.IntStack;
  */
 public class ArrayIntStack extends AbstractIntCollection implements IntStack
 {
+    @Override
     public void push(int n)
     {
-//
-//        size ++;
-//        checkSize();
-
         if(isEmpty())
         {
             values[0] = n;
@@ -43,7 +40,7 @@ public class ArrayIntStack extends AbstractIntCollection implements IntStack
         }
         values[0] = n;
     }
-
+    @Override
     public int pop()
     {
         int removedInt = 0;
@@ -63,7 +60,7 @@ public class ArrayIntStack extends AbstractIntCollection implements IntStack
         }
         return removedInt;
     }
-
+    @Override
     public int peek()
     {
         int valueToReturn = 0;
@@ -79,7 +76,7 @@ public class ArrayIntStack extends AbstractIntCollection implements IntStack
     }
 
 
-    public void checkSize()
+    private void checkSize()
     {
         if(size() == values.length)
         {

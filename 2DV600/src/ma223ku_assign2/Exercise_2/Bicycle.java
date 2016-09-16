@@ -8,7 +8,7 @@ public class Bicycle extends Vehicle
     int maximumPassengers = 1;
     public Bicycle(int passengers)
     {
-        if(passengers <= maximumPassengers)
+        if(passengers <= maximumPassengers && passengers > 0)
         {
             setSpace(0.2);
             setCostperP(0);

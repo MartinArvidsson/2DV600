@@ -8,13 +8,14 @@ import ma223ku_assign2.Exercise_1.da1031.IntList;
 
 public class ArrayIntList extends AbstractIntCollection implements IntList
 {
+    @Override
     public void add(int n)
     {
         checkSize();
         values[size] = n;
         size++;
     }
-
+    @Override
     public void addAt(int n,int index)
     {
         try
@@ -34,7 +35,7 @@ public class ArrayIntList extends AbstractIntCollection implements IntList
             System.out.println("An unexpected error has occured.");
         }
     }
-
+    @Override
     public void remove(int index)
     {
         try
@@ -52,14 +53,14 @@ public class ArrayIntList extends AbstractIntCollection implements IntList
             System.out.println("An unexpected error has occured.");
         }
     }
-
+    @Override
     public int get(int index)
     {
         checkIndex(index,size);
         return values[index];
     }
 
-
+    @Override
     public int indexOf(int n)
     {
         for (int i = 0; i < size; i++)
@@ -72,7 +73,7 @@ public class ArrayIntList extends AbstractIntCollection implements IntList
         return -1;
     }
 
-    public void checkSize()
+    private void checkSize()
     {
         if(size() == values.length)
         {

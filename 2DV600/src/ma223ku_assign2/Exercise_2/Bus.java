@@ -8,7 +8,7 @@ public class Bus extends Vehicle
     private int maximumPassengers = 20;
     public Bus(int passengers)
     {
-        if(passengers <= maximumPassengers)
+        if(passengers <= maximumPassengers && passengers > 0)
         {
             setSpace(4);
             setCostperP(10);
