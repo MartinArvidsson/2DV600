@@ -13,10 +13,9 @@ public class FerrySimulation
         //Add 3 of cars,Busses and Bicycles
         try
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 10; i++)
             {
-                ferry.embark(new Car(1));
-                ferry.embark(new Bicycle(1));
+                ferry.embark(new Lorry(2));
                 ferry.embark(new Bus(20));
             }
             System.out.println(ferry.toString());

@@ -31,6 +31,13 @@ public class Ferry implements IFerry
     @Override
     public int countVehicleSpace()
     {
+        currentSpace = 0;
+        Iterator<Vehicle> iterator = totalVehicle.iterator();
+        while (iterator.hasNext())
+        {
+            Vehicle _v = iterator.next();
+            currentSpace += _v.getSpace();
+        }
         return currentSpace;
     }
     @Override
@@ -67,6 +74,7 @@ public class Ferry implements IFerry
     public void disembark()
     {
         totalVehicle.clear();
+        currentSpace = 0;
         totalpassengers.clear();
     }
     @Override
@@ -96,9 +104,9 @@ public class Ferry implements IFerry
         Iterator<Vehicle> iterator = totalVehicle.iterator();
         String ferryInformation = "Ferry: " +
                 "\n Current Passengers : " + totalpassengers.size() + " of : " + maximumPassengers +
-                "\n Current Vehiclespace : " + totalVehicle.size() + " of : " + maximumVehicleSpace +
+                "\n Current Vehiclespace : " + countVehicleSpace() + " of : " + maximumVehicleSpace +
                 "\n Money earned : " + moneyEarned + " kr. \n\n" +
-                "Information about all vehicles \n";
+                "Information about all vehicles \n + ";
         while (iterator.hasNext())
         {
             Vehicle _v = iterator.next();
