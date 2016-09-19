@@ -43,35 +43,28 @@ public class ArrayIntStack extends AbstractIntCollection implements IntStack
     @Override
     public int pop()
     {
+        if(size == 0)
+        {
+            throw new IndexOutOfBoundsException();
+        }
         int removedInt = 0;
-        try
-        {
-            removedInt = values[0];
+        removedInt = values[0];
 
-            for (int i = 0; i < size-1; i+= 1)
-            {
-                values[i] = values[i+1];
-            }
-            size--;
-        }
-        catch (Exception e)
+        for (int i = 0; i < size-1; i+= 1)
         {
-            System.out.println("An error occured :(");
+            values[i] = values[i+1];
         }
+        size--;
         return removedInt;
     }
     @Override
     public int peek()
     {
-        int valueToReturn = 0;
-        try
+        if(size == 0)
         {
-            valueToReturn = values[0];
+            throw new IndexOutOfBoundsException();
         }
-        catch (Exception e)
-        {
-            System.out.println("An unexpected error occured");
-        }
+        int valueToReturn = values[0];
         return valueToReturn;
     }
 

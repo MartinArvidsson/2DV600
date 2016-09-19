@@ -18,45 +18,38 @@ public class ArrayIntList extends AbstractIntCollection implements IntList
     @Override
     public void addAt(int n,int index)
     {
-        try
+        if(index < 0 || index > size)
         {
-            size++;
-            checkSize();
-            checkIndex(index,values.length);
-            for (int i = size-1; i > index; i--)
-            {
-                values[i] = values[i-1];
-            }
-            values[index] = n;
-
+            throw new IndexOutOfBoundsException();
         }
-        catch (Exception e)
+        size++;
+        checkSize();
+        for (int i = size-1; i > index; i--)
         {
-            System.out.println("An unexpected error has occured.");
+            values[i] = values[i-1];
         }
+        values[index] = n;
     }
     @Override
     public void remove(int index)
     {
-        try
+        if(index < 0 || index > size)
         {
-            checkIndex(index,size);
-            for (int i = index; i < size-1; i+= 1)
-            {
-                values[i] = values[i+1];
-            }
-            size--;
-
+            throw new IndexOutOfBoundsException();
         }
-        catch (Exception e)
+        for (int i = index; i < size-1; i+= 1)
         {
-            System.out.println("An unexpected error has occured.");
+            values[i] = values[i+1];
         }
+        size--;
     }
     @Override
     public int get(int index)
     {
-        checkIndex(index,size);
+        if(index < 0 || index > size)
+        {
+            throw new IndexOutOfBoundsException();
+        }
         return values[index];
     }
 
