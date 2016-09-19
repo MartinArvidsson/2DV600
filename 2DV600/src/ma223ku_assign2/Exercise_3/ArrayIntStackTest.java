@@ -1,4 +1,4 @@
-package ma223ku_assign2.Exercise_1;
+package ma223ku_assign2.Exercise_3;
 
 import static org.junit.Assert.*;
 
@@ -7,6 +7,18 @@ import static org.junit.Assert.*;
  */
 public class ArrayIntStackTest
 {
+/*    @org.junit.Before
+    public void setUp() throws Exception
+    {
+
+    }
+
+    @org.junit.After
+    public void tearDown() throws Exception
+    {
+
+    }*/
+
     @org.junit.Test
     public void push() throws Exception
     {
@@ -24,5 +36,4 @@ public class ArrayIntStackTest
     {
 
     }
-
 }
