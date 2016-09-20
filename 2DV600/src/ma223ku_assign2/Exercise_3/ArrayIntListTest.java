@@ -66,7 +66,7 @@ public class ArrayIntListTest
     public void remove() throws Exception
     {
         ArrayIntList intlist = new ArrayIntList();
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 50000; i++)
         {
             intlist.add(i);
         }
@@ -83,7 +83,7 @@ public class ArrayIntListTest
         }
         try
         {
-            intlist.remove(100);
+            intlist.remove(60000);
             fail("Test failed, no exception was thrown");
         }
         catch (IndexOutOfBoundsException e)
@@ -97,14 +97,14 @@ public class ArrayIntListTest
     public void get() throws Exception
     {
         ArrayIntList intlist = new ArrayIntList();
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 50000; i++)
         {
             intlist.add(i);
         }
         intlist.get(20);
         try
         {
-            intlist.get(100);
+            intlist.get(60000);
             fail("Test failed, no exception was thrown");
         }
         catch (IndexOutOfBoundsException e)
@@ -117,7 +117,7 @@ public class ArrayIntListTest
     public void indexOf() throws Exception
     {
         ArrayIntList intlist = new ArrayIntList();
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 50000; i++)
         {
             intlist.add(i);
         }
@@ -125,6 +125,7 @@ public class ArrayIntListTest
         intlist.indexOf(45);
         intlist.indexOf(1);
         intlist.indexOf(100);
+        intlist.indexOf(60000);
     }
 
 }
