@@ -1,19 +1,21 @@
 package ma223ku_assign2.Exercise_5;
 
-import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.HashSet;
+import java.util.TreeSet;
 
 /**
- * Created by marti on 2016-09-21.
+ * Created by Martin on 2016-09-21.
  */
-public class IndentifyWordsMain
+public class WordCount1Main
 {
+    static HashSet<Word> _hashset = new HashSet<>();
+    static TreeSet<Word> _treeset = new TreeSet<>();
     static String _filepath = "";
-    static String textcontent = "";
-    static String newTextfile ="";
-    static char currentCharacter;
-
+    static String textcontent ="";
+    static String wordToAdd = "";
+    static Character currentCharacter;
     public static void main(String[] args)
     {
         try
@@ -22,7 +24,6 @@ public class IndentifyWordsMain
             {
                 _filepath = args[0];
                 readFile();
-                createFile();
             } else
             {
                 throw new IndexOutOfBoundsException();
@@ -42,30 +43,23 @@ public class IndentifyWordsMain
         }
         catch ( Exception e)
         {
-           e.printStackTrace();
+            e.printStackTrace();
         }
 
         for (int i = 0; i < textcontent.length(); i++)
         {
             currentCharacter = textcontent.charAt(i);
-            if(Character.isWhitespace(currentCharacter) || Character.isLetter(currentCharacter))
+            if(Character.isWhitespace(currentCharacter))
             {
-                newTextfile += currentCharacter;
+                Word _word = new Word(wordToAdd);
+                _hashset.add(_word);
+                _treeset.add(_word);
+                wordToAdd = "";
             }
-        }
-    }
-
-    public static void createFile()
-    {
-        try
-        {
-            PrintWriter writer = new PrintWriter("Words.txt", "UTF-8");
-            writer.print(newTextfile);
-            writer.close();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
+            else if(!Character.isWhitespace(currentCharacter))
+            {
+                wordToAdd += currentCharacter;
+            }
         }
     }
 }

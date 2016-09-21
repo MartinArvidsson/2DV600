@@ -8,22 +8,42 @@ public class Word implements Comparable<Word> {
 
     public Word(String str)
     {
+        word = str;
     }
     public String toString()
     {
         return word;
     }
     /* Override Object methods */
+
     public int hashCode()
     {
-        "compute a hash value for word"
+        word.toLowerCase();
+        int hc = 0;
+        for ( int i=0;i<word.length();i++) {
+            char c = word.charAt(i);
+            hc += Character.getNumericValue(c); // ASCII number
+        }
+        return hc;
+        //From slides
+        //"compute a hash value for word"
     }
     public boolean equals(Object other)
     {
-        "true if two words are equal"
+        if(other instanceof Word)
+        {
+            Word wordtocompare = (Word)other;
+            return word.toLowerCase().equals(wordtocompare.word.toLowerCase());
+        }
+        return false;
+        //"true if two words are equal"
     }
     /* Implement Comparable */
     public int compareTo(Word w)
-    { "compares two words lexicographically"
+    {
+        //"compares two words lexicographically"
+
+        return word.compareToIgnoreCase(w.toString());
+
     }
 }
