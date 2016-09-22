@@ -3,6 +3,7 @@ package ma223ku_assign2.Exercise_5;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.TreeSet;
 
 /**
@@ -10,12 +11,12 @@ import java.util.TreeSet;
  */
 public class WordCount1Main
 {
-    static HashSet<Word> _hashset = new HashSet<>();
-    static TreeSet<Word> _treeset = new TreeSet<>();
-    static String _filepath = "";
-    static String textcontent ="";
-    static String wordToAdd = "";
-    static Character currentCharacter;
+    private static HashSet<Word> _hashset = new HashSet<>();
+    private static TreeSet<Word> _treeset = new TreeSet<>();
+    private static String _filepath = "", wordToAdd = "", textcontent ="";
+    private static Character currentCharacter;
+    private static HashWordSet _hashWordSet = new HashWordSet();
+
     public static void main(String[] args)
     {
         try
@@ -24,6 +25,7 @@ public class WordCount1Main
             {
                 _filepath = args[0];
                 readFile();
+                print();
             } else
             {
                 throw new IndexOutOfBoundsException();
@@ -52,14 +54,26 @@ public class WordCount1Main
             if(Character.isWhitespace(currentCharacter))
             {
                 Word _word = new Word(wordToAdd);
-                _hashset.add(_word);
-                _treeset.add(_word);
+                //_hashset.add(_word);
+                //_treeset.add(_word);
+                _hashWordSet.add(_word); //Test for own hashset
                 wordToAdd = "";
             }
             else if(!Character.isWhitespace(currentCharacter))
             {
                 wordToAdd += currentCharacter;
             }
+        }
+        Word _word = new Word(wordToAdd);
+        _hashWordSet.add(_word);
+    }
+
+    public static void print()
+    {
+        Iterator<Word> iterator = _hashWordSet.iterator();
+        while(iterator.hasNext())
+        {
+            System.out.println(iterator.next());
         }
     }
 }
