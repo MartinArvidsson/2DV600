@@ -57,7 +57,14 @@ public class HashWordSet implements WordSet
     @Override
     public String toString()
     {
-        return "";
+        Iterator<Word> iterator = iterator();
+        String textcontent ="";
+        while(iterator.hasNext())
+        {
+
+            textcontent += iterator.next() + ", ";
+        }
+        return textcontent;
     }
 
     public void rehash()
