@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Martin on 2016-09-14.
  */
-public class Vehicle
+public class Vehicle //Set values based on what vehicle is being embarked.
 {
     private double space;
     private int totalpassengers;
@@ -40,7 +40,7 @@ public class Vehicle
         typeofvehicle = _typeofvehicle;
     }
 
-    List<Passenger> getPassengerList()
+    List<Passenger> getPassengerList() //Returns a list of all passengers in a vehicle
     {
         passengersInVehicle.clear();
         for (int i = 0; i < getTotalpassengers(); i++)

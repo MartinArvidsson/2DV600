@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Created by marti on 2016-09-18.
  */
-public class ArrayIntStackTest
+public class ArrayIntStackTest //Testcases for the IntStack from Exercise 1
 {
     @org.junit.Before
     public void setUp() throws Exception
@@ -22,7 +22,7 @@ public class ArrayIntStackTest
     }
 
     @Test
-    public void push() throws Exception
+    public void push() throws Exception // push 10 000 items into the stack.
     {
         ArrayIntStack intstack = new ArrayIntStack();
         for (int i = 0; i < 10000; i++)
@@ -32,7 +32,7 @@ public class ArrayIntStackTest
     }
 
     @Test
-    public void pop() throws Exception
+    public void pop() throws Exception //Remove item from stack with 10 000 items. also try to remove from stack without items.
     {
         ArrayIntStack intstack = new ArrayIntStack();
         for (int i = 0; i < 10000; i++)
@@ -53,7 +53,7 @@ public class ArrayIntStackTest
     }
 
     @Test
-    public void peek() throws Exception
+    public void peek() throws Exception //Push 10 000 items. then peek. Also try to peek in an empty stack.
     {
         ArrayIntStack intstack = new ArrayIntStack();
         for (int i = 0; i < 10000; i++)

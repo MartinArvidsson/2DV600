@@ -5,10 +5,10 @@ package ma223ku_assign2.Exercise_2;
  */
 public class Bicycle extends Vehicle
 {
-    int maximumPassengers = 1;
-    public Bicycle(int passengers)
+    protected Bicycle(int passengers) //Constuctor for creating a new Bike if too many passengers are sent in throw exception instead
     {
-        if(passengers <= maximumPassengers && passengers > 0)
+        int maximumPassengers = 1;
+        if(passengers == maximumPassengers)
         {
             setSpace(0.2);
             setCostperP(0);

@@ -12,24 +12,24 @@ public class Ferry implements IFerry
     private int moneyEarned = 0;
     private int maximumPassengers = 200;
     private int maximumVehicleSpace = 40;
-    private int currentSpace;
+    private double currentSpace;
     private ArrayList<Passenger> totalpassengers;
     private ArrayList<Vehicle> totalVehicle;
     private List<Passenger> _passengers;
 
-    public Ferry()
+    public Ferry()//New list of passengers and Vehicles
     {
         totalpassengers = new ArrayList<>();
         totalVehicle = new ArrayList<>();
     }
     @Override
-    public int countPassengers()
+    public int countPassengers() //Returns how many passengers are currently boarded
     {
 
         return totalpassengers.size();
     }
     @Override
-    public int countVehicleSpace()
+    public int countVehicleSpace() //returns how many vehicles are currently placed on the ferry.
     {
         currentSpace = 0;
         Iterator<Vehicle> iterator = totalVehicle.iterator();
@@ -38,13 +38,13 @@ public class Ferry implements IFerry
             Vehicle _v = iterator.next();
             currentSpace += _v.getSpace();
         }
-        return currentSpace;
+        return (int)Math.ceil(currentSpace);
     }
     @Override
     public int countMoney()
     {
         return moneyEarned;
-    }
+    } // Returns how much money the ferry has currently earned
     @Override
     public void embark(Vehicle v)
     {
@@ -62,7 +62,7 @@ public class Ferry implements IFerry
         }
     }
     @Override
-    public void embark(Passenger p)
+    public void embark(Passenger p) //Boards a new Passengers on the ferry if the passengers hasn't boarded yet.
     {
         if(!totalpassengers.contains(p))
         {
@@ -71,14 +71,14 @@ public class Ferry implements IFerry
         }
     }
     @Override
-    public void disembark()
+    public void disembark() //Clears passengers and vehicles since all items on the ferry is removed.
     {
         totalVehicle.clear();
         currentSpace = 0;
         totalpassengers.clear();
     }
     @Override
-    public boolean hasSpaceFor(Vehicle v)
+    public boolean hasSpaceFor(Vehicle v) //Check if the Vehicle that wants to board can do that without going over the maximum number of vehicles
     {
         if(Math.ceil(currentSpace + v.getSpace()) <= maximumVehicleSpace && totalpassengers.size() + v.getPassengerList().size() < maximumPassengers)
         {
@@ -87,7 +87,7 @@ public class Ferry implements IFerry
         return false;
     }
     @Override
-    public boolean hasRoomFor(Passenger p)
+    public boolean hasRoomFor(Passenger p) //Check if the passenger can board the ferry or if the ferry will go over the maximum number of passengers allowed.
     {
         if((totalpassengers.size() + 1) <= maximumPassengers)
         {
@@ -99,7 +99,7 @@ public class Ferry implements IFerry
     }
 
     @Override
-    public String toString()
+    public String toString() //Returns information about the ferry, number of passengers,vehicles and information about all vehicles.
     {
         Iterator<Vehicle> iterator = totalVehicle.iterator();
         String ferryInformation = "Ferry: " +
@@ -119,7 +119,7 @@ public class Ferry implements IFerry
         return ferryInformation;
     }
     @Override
-    public Iterator<Vehicle> iterator()
+    public Iterator<Vehicle> iterator() //Iterates over all vehicles currently boarded.
     {
         return new Iterator<Vehicle>()
         {

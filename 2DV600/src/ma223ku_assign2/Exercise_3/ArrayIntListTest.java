@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Created by marti on 2016-09-19.
  */
-public class ArrayIntListTest
+public class ArrayIntListTest //Testcases for the IntList from Exercise 1
 {
     @org.junit.Before
     public void setUp() throws Exception
@@ -22,7 +22,7 @@ public class ArrayIntListTest
     }
 
     @Test
-    public void add() throws Exception
+    public void add() throws Exception //Test add function by checking size after adding items and adding negative items. both pos and neg. items should work.
     {
         ArrayIntList intlist = new ArrayIntList();
         intlist.add(14);
@@ -38,7 +38,7 @@ public class ArrayIntListTest
     }
 
     @Test
-    public void addAt() throws Exception
+    public void addAt() throws Exception //Trying to add at a specific location, testing out of range and in range.
     {
         ArrayIntList intlist = new ArrayIntList();
         intlist.addAt(1,0);
@@ -63,7 +63,7 @@ public class ArrayIntListTest
     }
 
     @Test
-    public void remove() throws Exception
+    public void remove() throws Exception //Try removing items in range and out of range
     {
         ArrayIntList intlist = new ArrayIntList();
         for (int i = 0; i < 50000; i++)
@@ -94,7 +94,7 @@ public class ArrayIntListTest
     }
 
     @Test
-    public void get() throws Exception
+    public void get() throws Exception //Try to get items in range and out of range
     {
         ArrayIntList intlist = new ArrayIntList();
         for (int i = 0; i < 50000; i++)
@@ -114,7 +114,7 @@ public class ArrayIntListTest
     }
 
     @Test
-    public void indexOf() throws Exception
+    public void indexOf() throws Exception //Try to find at a specific index. No exceptions are thrown in the function that is tested.
     {
         ArrayIntList intlist = new ArrayIntList();
         for (int i = 0; i < 50000; i++)

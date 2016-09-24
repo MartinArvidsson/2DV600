@@ -15,23 +15,23 @@ public class EQueue<E> implements Queue<E>
     public int size()
     {
         return size;
-    }
+    } //Size of queue
 
     public boolean isEmpty()
     {
         return size == 0;
-    }
+    } //If the queue is empty returns true
 
     public void enqueue(E element)
     {
-        if(head == null)
-        {               //If no elements exist, create one thats both head and tail.
+        if(head == null)//If no elements exist, create one thats both head and tail.
+        {
             head = new Node(element);
             tail = head;
         }
         else
         {
-            tail.setNextNode(new Node(element));
+            tail.setNextNode(new Node(element)); //Add a node to the tail then make the new node the new tail
             tail = tail.getNextNode();
         }
         size++;
@@ -54,7 +54,7 @@ public class EQueue<E> implements Queue<E>
 
     public E first()
     {
-        if(head != null)
+        if(head != null) //If a head exist returns the head.
         {
             return head.getElement();
         }
@@ -64,7 +64,7 @@ public class EQueue<E> implements Queue<E>
         }
     }
 
-    public E last()
+    public E last() //If a head exist return the tail. If the queue is only one element the head and tail is same.
     {
         if (head != null)
         {

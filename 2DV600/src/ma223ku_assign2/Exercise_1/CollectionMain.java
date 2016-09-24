@@ -7,9 +7,14 @@ public class CollectionMain
 {
     public static void main(String[] args)
     {
+        //Class for testing that intlist and intstack works properly,
+        //"Tests" the functions on both the list and stack with 3 items.
         ArrayIntList _list = new ArrayIntList();
         ArrayIntStack _stack = new ArrayIntStack();
 
+
+
+        //Test for List.
         _list.add(1);
         _list.add(2);
         _list.add(4);
@@ -23,6 +28,10 @@ public class CollectionMain
         System.out.println(_list.get(1));
         System.out.println(_list.indexOf(2));
         System.out.println(_list.indexOf(8));
+
+
+
+        //Test for Stack.
         _stack.push(1);
         _stack.push(2);
         _stack.push(3);

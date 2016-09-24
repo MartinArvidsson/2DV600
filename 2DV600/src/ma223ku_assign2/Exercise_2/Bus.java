@@ -5,10 +5,10 @@ package ma223ku_assign2.Exercise_2;
  */
 public class Bus extends Vehicle
 {
-    private int maximumPassengers = 20;
-    public Bus(int passengers)
+    protected Bus(int passengers)
     {
-        if(passengers <= maximumPassengers && passengers > 0)
+        int maximumPassengers = 20;
+        if(passengers <= maximumPassengers && passengers > 0) //Constuctor for creating a new Bus if too many passengers are sent in throw exception instead
         {
             setSpace(4);
             setCostperP(10);

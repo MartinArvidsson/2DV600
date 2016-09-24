@@ -12,12 +12,12 @@ public class ArrayIntStack extends AbstractIntCollection implements IntStack
     @Override
     public void push(int n)
     {
-        if(isEmpty())
+        if(isEmpty()) //If there are no items in the stack, add a new item at the first pos. also increase size by one
         {
-            values[0] = n;
             size++;
+            values[0] = n;
         }
-        else
+        else //Move all items and place the new item at the first position. increase size by one aswell.
         {
             int temp = values[0];
             int _temp;
@@ -41,13 +41,13 @@ public class ArrayIntStack extends AbstractIntCollection implements IntStack
         values[0] = n;
     }
     @Override
-    public int pop()
+    public int pop() //Remove the first position. if no items are avalible to remove, throw exception instead.
     {
         if(size == 0)
         {
             throw new IndexOutOfBoundsException();
         }
-        int removedInt = 0;
+        int removedInt;
         removedInt = values[0];
 
         for (int i = 0; i < size-1; i+= 1)
@@ -58,7 +58,7 @@ public class ArrayIntStack extends AbstractIntCollection implements IntStack
         return removedInt;
     }
     @Override
-    public int peek()
+    public int peek() //Return first item, if there are no item to return. throw exception.
     {
         if(size == 0)
         {
@@ -71,7 +71,7 @@ public class ArrayIntStack extends AbstractIntCollection implements IntStack
 
     private void checkSize()
     {
-        if(size() == values.length)
+        if(size() == values.length) //If we have filled the stack and no more positions are avalible, resize it, increasing the size.
         {
             resize();
         }

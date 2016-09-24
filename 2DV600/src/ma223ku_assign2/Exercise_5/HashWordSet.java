@@ -8,43 +8,60 @@ import java.util.Iterator;
 public class HashWordSet implements WordSet
 {
     //http://homepage.lnu.se/staff/jlnmsi/fost/lectures/collections.pdf
-    //http://homepage.lnu.se/staff/jlnmsi/fost/pa1_5.htm
+
+    //Most of the functions are taken from the presentationslides linked above. The functions have only been altered from adding String  to adding Word
     private Node[] buckets = new Node[8];
     private int size;
     @Override
     public void add(Word word)
     {
         int pos = getBucketNumber(word);
-        Node node = buckets[pos]; // First node in list
-        while (node != null) { // Search list
-            if (node.value. equals( word ))
-                return; // Element found ==> return
+        Node node = buckets[pos]; //First node in list
+        while (node != null) //Go through all elements
+        {
+            if (node.value.equals(word)) //If value found return
+            {
+                return;
+            }
             else
-                node = node.next; // Next node in list
+            {
+                node = node.next; //Next node
+            }
         }
-        node = new Node(word); // Not found, add new node as first entry
+        node = new Node(word); //Add new node.
         node.next = buckets[pos ];
         buckets [pos] = node;
         size++;
-        if (size == buckets.length) rehash (); // Rehash if needed
+        if (size == buckets.length) //If maxsize has been reached, rehash.
+        {
+            rehash();
+        }
     }
     @Override
     public boolean contains(Word word)
     {
         int pos = getBucketNumber(word);
         Node node = buckets[pos];
-        while (node != null) { // Search list for element
+        while (node != null) //Search through all items
+        {
             if (node.value. equals( word ))
-                return true; // Found!
+            {
+                return true;
+            }
             else
+            {
                 node = node.next;
+            }
         }
-        return false ; // Not found
+        return false ;
     }
     public int getBucketNumber(Word word)
     {
-        int hc = word.hashCode(); // Use hashCode() from String class
-        if (hc < 0) hc = -hc; // Make sure non−negative
+        int hc = word.hashCode();
+        if (hc < 0)
+        {
+            hc = -hc;
+        }
         return hc % buckets.length;
     }
 
@@ -61,7 +78,6 @@ public class HashWordSet implements WordSet
         String textcontent ="";
         while(iterator.hasNext())
         {
-
             textcontent += iterator.next() + ", ";
         }
         return textcontent;
@@ -69,23 +85,23 @@ public class HashWordSet implements WordSet
 
     public void rehash()
     {
-        Node[] temp = buckets; // Copy of old buckets
-        buckets = new Node[2*temp.length];
+        Node[] temp = buckets; //Old buckets
+        buckets = new Node[2*temp.length]; //New with double the amount
         size = 0;
-        for (Node n : temp)
-        { // Insert old values into new buckets
-            if (n == null) continue; // Empty bucket
+        for (Node n : temp) //Move old into new
+        {
+            if (n == null) continue;
             while (n != null )
             {
-                add(n.value); // Add elements again
+                add(n.value);
                 n = n.next;
             }
         }
 
     }
-    private class Node
+    private class Node //Node placed in buckets
     {
-        Word value ;
+        Word value;
         Node next = null;
         public Node (Word _word )
         {
@@ -104,7 +120,7 @@ public class HashWordSet implements WordSet
         return new wordIterator();
     }
 
-    private class wordIterator implements Iterator<Word>
+    private class wordIterator implements Iterator<Word> //Iterate all items
     {
         private Node next;
         private int index = 0;
@@ -118,22 +134,21 @@ public class HashWordSet implements WordSet
             return next != null;
         }
 
-        public Node findBucket()
+        public Node findBucket() //Find a bucket that contains items
         {
             for (int i = index; i < buckets.length; i++)
             {
                 if (buckets[i] != null)
                 {
-                    index = i + 1;
+                    index = i + 1; //So the iterator starts again at next item and don't enter the same bucket twice
                     return buckets[i];
                 }
             }
             return null;
         }
 
-        public Word next()
+        public Word next() //Returns Word in bucket
         {
-            //System.out.println(size);
             Word toReturn = next.value;
             if (next.next != null)
             {
@@ -141,7 +156,7 @@ public class HashWordSet implements WordSet
             }
             else
             {
-                next = findBucket();
+                next = findBucket(); //If all items have been returned keep looking for new buckets with items in them.
             }
             return toReturn;
         }

@@ -5,10 +5,10 @@ package ma223ku_assign2.Exercise_2;
  */
 public class Car extends Vehicle
 {
-    private int maximumPassengers = 4;
-    public Car(int passengers)
+    protected Car(int passengers)
     {
-        if(passengers <= maximumPassengers && passengers > 0)
+        int maximumPassengers = 4;
+        if(passengers <= maximumPassengers && passengers > 0)//Constuctor for creating a new Car if too many passengers are sent in throw exception instead
         {
             setSpace(1);
             setCostperP(15);

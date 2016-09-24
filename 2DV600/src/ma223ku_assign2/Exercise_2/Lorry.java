@@ -5,10 +5,10 @@ package ma223ku_assign2.Exercise_2;
  */
 public class Lorry extends Vehicle
 {
-    private int maximumPassengers = 2;
-    public Lorry(int passengers)
+    protected Lorry(int passengers)
     {
-        if(passengers <= maximumPassengers && passengers > 0)
+        int maximumPassengers = 2;
+        if(passengers <= maximumPassengers && passengers > 0) //Constuctor for creating a new lorry if too many passengers are sent in throw exception instead
         {
             setSpace(8);
             setCostperP(15);

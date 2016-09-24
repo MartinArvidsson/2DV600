@@ -9,10 +9,10 @@ import java.nio.file.Paths;
  */
 public class IndentifyWordsMain
 {
-    static String _filepath = "";
-    static String textcontent = "";
-    static String newTextfile ="";
-    static char currentCharacter;
+    private static String _filepath = "";
+    private static String textcontent = "";
+    private static String newTextfile ="";
+    private static char currentCharacter;
 
     public static void main(String[] args)
     {
@@ -38,14 +38,14 @@ public class IndentifyWordsMain
     {
         try
         {
-            textcontent = new String(Files.readAllBytes(Paths.get(_filepath)));
+            textcontent = new String(Files.readAllBytes(Paths.get(_filepath))); //Create a string of all content in the path
         }
         catch ( Exception e)
         {
            e.printStackTrace();
         }
 
-        for (int i = 0; i < textcontent.length(); i++)
+        for (int i = 0; i < textcontent.length(); i++) //Remove all items that isn't whitespace or letters. ALl other items are added to a new string.
         {
             currentCharacter = textcontent.charAt(i);
             if(Character.isWhitespace(currentCharacter) || Character.isLetter(currentCharacter))
@@ -58,7 +58,7 @@ public class IndentifyWordsMain
     public static void createFile()
     {
         try
-        {
+        { //Create a new textfile (.txt) with the content of the newly created file.
             PrintWriter writer = new PrintWriter("Words.txt", "UTF-8");
             writer.print(newTextfile);
             writer.close();
