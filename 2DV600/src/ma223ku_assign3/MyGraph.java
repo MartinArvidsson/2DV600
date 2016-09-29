@@ -16,6 +16,10 @@ public class MyGraph<E> implements DirectedGraph<E>
     @Override
     public Node addNodeFor(E item)
     {
+        if(item == null)
+        {
+            throw new IndexOutOfBoundsException();
+        }
         if (containsNodeFor(item))
         {
             System.out.println("Item already exist in the hashset");
@@ -49,7 +53,7 @@ public class MyGraph<E> implements DirectedGraph<E>
             return null;
         }
     }
-
+    @SuppressWarnings("unchecked cast")
     @Override
     public boolean addEdgeFor(E from, E to)
     {
@@ -98,13 +102,13 @@ public class MyGraph<E> implements DirectedGraph<E>
     @Override
     public Iterator<Node<E>> iterator()
     {
-        return null;
+        return new mapiterator();
     }
 
     @Override
     public Iterator<Node<E>> heads()
     {
-        return null;
+        return heads.iterator();
     }
 
     @Override
@@ -116,7 +120,7 @@ public class MyGraph<E> implements DirectedGraph<E>
     @Override
     public Iterator<Node<E>> tails()
     {
-        return null;
+        return tails.iterator();
     }
 
     @Override
@@ -163,5 +167,22 @@ public class MyGraph<E> implements DirectedGraph<E>
         }
 
         return false;
+    }
+
+    private class mapiterator implements Iterator<Node<E>>
+    {
+        Iterator iterator = item2node.entrySet().iterator();
+
+        @Override
+        public boolean hasNext()
+        {
+           return iterator.hasNext();
+        }
+
+        public MyNode next()
+        {
+            MyNode<E> node = (MyNode<E>)iterator.next();
+            return node;
+        }
     }
 }

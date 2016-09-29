@@ -14,7 +14,6 @@ public class MyNode<E> extends Node<E>
 {
     private Set<Node<E>> preds = new HashSet<>();
     private Set<Node<E>> succs = new HashSet<>();
-    public int num;
 
     /**
      * Constructs a new node using <tt>item</tt> as key.
@@ -29,37 +28,37 @@ public class MyNode<E> extends Node<E>
     @Override
     public boolean hasSucc(Node<E> node)
     {
-        return false;
+        return succs.size() != 0;
     }
 
     @Override
     public int outDegree()
     {
-        return 0;
+        return succs.size();
     }
 
     @Override
     public Iterator<Node<E>> succsOf()
     {
-        return null;
+        return succs.iterator();
     }
 
     @Override
     public boolean hasPred(Node<E> node)
     {
-        return false;
+        return preds.size() != 0;
     }
 
     @Override
     public int inDegree()
     {
-        return 0;
+        return preds.size();
     }
 
     @Override
     public Iterator<Node<E>> predsOf()
     {
-        return null;
+        return preds.iterator();
     }
 
     @Override
@@ -71,24 +70,42 @@ public class MyNode<E> extends Node<E>
     @Override
     protected void removeSucc(Node<E> succ)
     {
-
+        succs.remove(succ);
     }
 
     @Override
     protected void addPred(Node<E> pred)
     {
-
+        preds.add(pred);
     }
 
     @Override
     protected void removePred(Node<E> pred)
     {
-
+        preds.remove(pred);
     }
 
+    @SuppressWarnings("unchecked cast")
     @Override
     protected void disconnect()
     {
+        Iterator iterator = predsOf();
+        while(iterator.hasNext())
+        {
+            MyNode<E> node = (MyNode<E>)iterator.next();
+            node.removeSucc(this);
+        }
 
+        Iterator _iterator = succsOf();
+
+        while(_iterator.hasNext())
+        {
+            MyNode<E> node = (MyNode<E>)_iterator.next();
+            node.removePred(this);
+
+        }
+
+        preds.clear();
+        succs.clear();
     }
 }
