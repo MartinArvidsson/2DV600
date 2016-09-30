@@ -132,19 +132,34 @@ public class MyGraph<E> implements DirectedGraph<E>
     @Override
     public List allItems()
     {
-        return null;
+        ArrayList list = new ArrayList();
+        for(MyNode _item : item2node.values())
+        {
+            list.add(_item.item());
+        }
+        return list;
     }
 
     @Override
     public int edgeCount()
     {
-        return 0;
+        int numberofedges = 0;
+
+
+        for(MyNode _item : item2node.values())
+        {
+            numberofedges += _item.outDegree();
+        }
+        return numberofedges;
     }
 
     @Override
     public void removeNodeFor(Object item)
     {
+        if(item != null || !containsNodeFor(item))
+        {
 
+        }
     }
 
     @Override
