@@ -127,9 +127,7 @@ public interface DirectedGraph<E> extends Iterable<Node<E>> {
 	 * @return <tt>true</tt> if edge in graph, otherwise <tt>false</tt>.
 	 */
 	public boolean containsEdgeFor(E from, E to);
-	
-	
-	
+
 	/**
 	 * Removes the edge between the nodes represented 
 	 * by <tt>from</tt> and <tt>to</tt> if it exist.

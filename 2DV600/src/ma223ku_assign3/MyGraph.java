@@ -10,9 +10,17 @@ import java.util.*;
  */
 public class MyGraph<E> implements DirectedGraph<E>
 {
-    private Map<E,MyNode<E>> item2node = new HashMap<E, MyNode<E>>();
-    private Set<Node<E>> heads = new HashSet<>();
-    private Set<Node<E>> tails = new HashSet<>();
+    private Map<E,MyNode<E>> item2node;
+    private Set<Node<E>> heads;
+    private Set<Node<E>> tails;
+
+    public MyGraph()
+    {
+        item2node = new HashMap<>();
+        heads = new HashSet<>();
+        tails = new HashSet<>();
+    }
+
     @Override
     public Node addNodeFor(E item)
     {
@@ -20,15 +28,16 @@ public class MyGraph<E> implements DirectedGraph<E>
         {
             throw new IndexOutOfBoundsException();
         }
-        if (containsNodeFor(item))
+        else
         {
-            System.out.println("Item already exist in the hashset");
-            return null;
-        } else
-        {
-            MyNode _mynode = new MyNode<>(item);
-            item2node.put(item, _mynode);
-            return _mynode;
+            if(!item2node.containsKey(item))
+            {
+                MyNode _mynode = new MyNode<>(item);
+                heads.add(_mynode);
+                tails.add(_mynode);
+                item2node.put(item, _mynode);
+            }
+            return item2node.get(item);
         }
     }
 
@@ -83,14 +92,11 @@ public class MyGraph<E> implements DirectedGraph<E>
     @Override
     public boolean containsNodeFor(Object item)
     {
-        if(item2node.containsKey(item))
+        if(item == null)
         {
-            return false;
+            throw new IndexOutOfBoundsException();
         }
-        else
-        {
-            return true;
-        }
+        return item2node.get(item) != null;
     }
 
     @Override
@@ -156,10 +162,42 @@ public class MyGraph<E> implements DirectedGraph<E>
     @Override
     public void removeNodeFor(Object item)
     {
-        if(item != null || !containsNodeFor(item))
+        if(item == null && item2node.get(item) == null)
         {
-
+            throw new RuntimeException("Null as input");
         }
+
+        MyNode toremove = item2node.get(item);
+        if(toremove.isHead())
+        {
+            heads.remove(item);
+        }
+        if(toremove.isTail())
+        {
+            tails.remove(item);
+        }
+
+        for(MyNode node: item2node.values())
+        {
+            if(node.hasPred(toremove))
+            {
+                node.removePred(toremove);
+                if(node.isHead())
+                {
+                    heads.add(node);
+                }
+            }
+            if(node.hasSucc(toremove))
+            {
+                node.removeSucc(toremove);
+                if(node.isTail())
+                {
+                    heads.add(node);
+                }
+            }
+        }
+        toremove.disconnect();
+        item2node.remove(item);
     }
 
     @Override
@@ -167,10 +205,14 @@ public class MyGraph<E> implements DirectedGraph<E>
     {
         if(from == null || to == null)
         {
-            throw new RuntimeException("Recieved null as input");
+            throw new IndexOutOfBoundsException();
+        }
+        if(!containsNodeFor(from) && !containsNodeFor(to))
+        {
+            return false;
         }
 
-        return false;
+        return item2node.get(from).hasSucc(item2node.get(to));
     }
 
     @Override
@@ -180,20 +222,45 @@ public class MyGraph<E> implements DirectedGraph<E>
         {
             throw new RuntimeException("Recieved null as input");
         }
+        if(containsEdgeFor(from,to))
+        {
+            MyNode _from = item2node.get(from);
+            MyNode _to = item2node.get(to);
+            _from.removeSucc(_to);
+            _to.removePred(_from);
+
+            if(_from.isTail())
+            {
+                if(!tails.contains(_from))
+                {
+                    tails.add(_from);
+                }
+            }
+
+            if(_to.isHead())
+            {
+                if(!heads.contains(_to))
+                {
+                    heads.add(_to);
+                }
+            }
+
+            return true;
+        }
 
         return false;
     }
 
     private class mapiterator implements Iterator<Node<E>>
     {
-        Iterator iterator = item2node.entrySet().iterator();
+        Iterator iterator = item2node.values().iterator();
 
         @Override
         public boolean hasNext()
         {
            return iterator.hasNext();
         }
-
+        @Override
         public MyNode next()
         {
             MyNode<E> node = (MyNode<E>)iterator.next();

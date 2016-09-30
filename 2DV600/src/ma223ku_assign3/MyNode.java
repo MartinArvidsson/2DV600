@@ -28,7 +28,7 @@ public class MyNode<E> extends Node<E>
     @Override
     public boolean hasSucc(Node<E> node)
     {
-        return succs.size() != 0;
+        return succs.contains(node);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class MyNode<E> extends Node<E>
     @Override
     public boolean hasPred(Node<E> node)
     {
-        return preds.size() != 0;
+        return preds.contains(node);
     }
 
     @Override

@@ -18,8 +18,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
-import teachers.*;     // Replace with groupname.*
-
+import ma223ku_assign3.*;                      // Replace with groupname.*;
 /**
  * @author jonasl
  *
