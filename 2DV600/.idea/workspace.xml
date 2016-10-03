@@ -20,28 +20,14 @@
     <favorites_list name="2DV600" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="MyGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+            <state relative-caret-position="306">
+              <caret line="107" column="13" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5557#5558#0" expanded="true" />
-                <element signature="e#5605#5606#0" expanded="true" />
-                <marker date="1475247828767" expanded="false" signature="2245:2260" ph=" { " />
-                <marker date="1475247828767" expanded="false" signature="2284:2290" ph=" }" />
-                <marker date="1475247828767" expanded="false" signature="2345:2360" ph=" { " />
-                <marker date="1475247828767" expanded="false" signature="2385:2391" ph=" }" />
-                <marker date="1475247828767" expanded="false" signature="2443:2458" ph=" { " />
-                <marker date="1475247828767" expanded="false" signature="2482:2488" ph=" }" />
-                <marker date="1475247828767" expanded="false" signature="2530:2545" ph=" { " />
-                <marker date="1475247828767" expanded="false" signature="2565:2571" ph=" }" />
-                <marker date="1475247828767" expanded="false" signature="2623:2638" ph=" { " />
-                <marker date="1475247828767" expanded="false" signature="2662:2668" ph=" }" />
-                <marker date="1475247828767" expanded="false" signature="2710:2725" ph=" { " />
-                <marker date="1475247828767" expanded="false" signature="2745:2751" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -50,7 +36,7 @@
       <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/graphs/DirectedGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
+            <state relative-caret-position="267">
               <caret line="121" column="70" selection-start-line="121" selection-start-column="70" selection-end-line="121" selection-end-column="70" />
               <folding />
             </state>
@@ -60,7 +46,7 @@
       <file leaf-file-name="GraphGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/graphs/test/GraphGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
+            <state relative-caret-position="4913">
               <caret line="305" column="28" selection-start-line="305" selection-start-column="28" selection-end-line="305" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -72,7 +58,7 @@
       <file leaf-file-name="MyNode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
+            <state relative-caret-position="510">
               <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
               <folding>
                 <element signature="e#442#443#0" expanded="true" />
@@ -90,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestDirectedGraph.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestDirectedGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/graphs/test/TestDirectedGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
+            <state relative-caret-position="182">
               <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -106,6 +92,30 @@
                 <element signature="method#check_graph#0;class#TestDirectedGraph#0" expanded="false" />
                 <element signature="method#check_node#0;class#TestDirectedGraph#0" expanded="false" />
                 <element signature="method#check_remove#0;class#TestDirectedGraph#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="directed_graph_[1].gml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/directed_graph_[1].gml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-391">
+              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyGML.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyGML.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
+                <element signature="e#279#280#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ma223ku_assign2/CollectionMain.java" />
         <option value="$PROJECT_DIR$/src/ma223ku_assign2/ArrayIntStack.java" />
         <option value="$PROJECT_DIR$/src/ma223ku_assign2/ma223ku_assign2_Exercise1/da1031/CollectionMain.java" />
         <option value="$PROJECT_DIR$/src/ma223ku_assign2/ma223ku_assign2_Exercise1/da1031/ArrayIntList.java" />
@@ -173,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/ma223ku_assign3/myBFS.java" />
         <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyConnectedComponents.java" />
         <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyDFS.java" />
-        <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyGML.java" />
         <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyTransitiveClosure.java" />
         <option value="$PROJECT_DIR$/src/graphs/test/TestDFS.java" />
         <option value="$PROJECT_DIR$/src/graphs/test/GeneratorMain.java" />
@@ -181,6 +189,8 @@
         <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyNode.java" />
         <option value="$PROJECT_DIR$/src/graphs/DirectedGraph.java" />
         <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyGraph.java" />
+        <option value="$PROJECT_DIR$/directed_graph_[1].gml" />
+        <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyGML.java" />
       </list>
     </option>
   </component>
@@ -222,6 +232,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -293,7 +304,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane />
       </pane>
@@ -711,26 +721,26 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestDirectedGraph_testExceptions - 2016.09.30 at 16h 58m 10s.xml">
-      <configuration name="TestDirectedGraph.testExceptions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDirectedGraph_testExceptions - 2016.09.30 at 17h 02m 57s.xml">
-      <configuration name="TestDirectedGraph.testExceptions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDirectedGraph_testExceptions - 2016.09.30 at 17h 03m 56s.xml">
-      <configuration name="TestDirectedGraph.testExceptions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDirectedGraph_testGML - 2016.09.30 at 17h 04m 19s.xml">
+    <history-entry file="TestDirectedGraph_testGML - 2016.10.03 at 16h 47m 30s.xml">
       <configuration name="TestDirectedGraph.testGML" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDirectedGraph_testIterator - 2016.09.30 at 17h 04m 07s.xml">
-      <configuration name="TestDirectedGraph.testIterator" configurationId="JUnit" />
+    <history-entry file="TestDirectedGraph_testGML - 2016.10.03 at 16h 48m 24s.xml">
+      <configuration name="TestDirectedGraph.testGML" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDirectedGraph_testRemove - 2016.09.30 at 16h 02m 39s.xml">
-      <configuration name="TestDirectedGraph.testRemove" configurationId="JUnit" />
+    <history-entry file="TestDirectedGraph_testGML - 2016.10.03 at 16h 55m 25s.xml">
+      <configuration name="TestDirectedGraph.testGML" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDirectedGraph_testRemove - 2016.09.30 at 16h 19m 38s.xml">
-      <configuration name="TestDirectedGraph.testRemove" configurationId="JUnit" />
+    <history-entry file="TestDirectedGraph_testGML - 2016.10.03 at 16h 59m 35s.xml">
+      <configuration name="TestDirectedGraph.testGML" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDirectedGraph_testGML - 2016.10.03 at 17h 01m 53s.xml">
+      <configuration name="TestDirectedGraph.testGML" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDirectedGraph_testGML - 2016.10.03 at 17h 02m 51s.xml">
+      <configuration name="TestDirectedGraph.testGML" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDirectedGraph_testGML - 2016.10.03 at 17h 03m 55s.xml">
+      <configuration name="TestDirectedGraph.testGML" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestDirectedGraph_testRemove - 2016.09.30 at 16h 23m 02s.xml">
       <configuration name="TestDirectedGraph.testRemove" configurationId="JUnit" />
@@ -753,17 +763,17 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19213974" sideWeight="0.50625" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35371178" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.8716216" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.8597973" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5043668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.12837838" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.1402027" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -833,13 +843,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ma223ku_assign2/Exercise_1/da1031/IntStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ma223ku_assign1/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -1104,20 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyGML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyTransitiveClosure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1172,13 +1161,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
+        <state relative-caret-position="510">
           <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
           <folding>
             <element signature="e#442#443#0" expanded="true" />
@@ -1197,7 +1185,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graphs/test/GraphGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
+        <state relative-caret-position="4913">
           <caret line="305" column="28" selection-start-line="305" selection-start-column="28" selection-end-line="305" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1213,41 +1201,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="107" column="13" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/graphs/DirectedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
+        <state relative-caret-position="267">
           <caret line="121" column="70" selection-start-line="121" selection-start-column="70" selection-end-line="121" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyGraph.java">
+    <entry file="file://$PROJECT_DIR$/directed_graph_[1].gml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5557#5558#0" expanded="true" />
-            <element signature="e#5605#5606#0" expanded="true" />
-            <marker date="1475247828767" expanded="false" signature="2245:2260" ph=" { " />
-            <marker date="1475247828767" expanded="false" signature="2284:2290" ph=" }" />
-            <marker date="1475247828767" expanded="false" signature="2345:2360" ph=" { " />
-            <marker date="1475247828767" expanded="false" signature="2385:2391" ph=" }" />
-            <marker date="1475247828767" expanded="false" signature="2443:2458" ph=" { " />
-            <marker date="1475247828767" expanded="false" signature="2482:2488" ph=" }" />
-            <marker date="1475247828767" expanded="false" signature="2530:2545" ph=" { " />
-            <marker date="1475247828767" expanded="false" signature="2565:2571" ph=" }" />
-            <marker date="1475247828767" expanded="false" signature="2623:2638" ph=" { " />
-            <marker date="1475247828767" expanded="false" signature="2662:2668" ph=" }" />
-            <marker date="1475247828767" expanded="false" signature="2710:2725" ph=" { " />
-            <marker date="1475247828767" expanded="false" signature="2745:2751" ph=" }" />
-          </folding>
+        <state relative-caret-position="-391">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graphs/test/TestDirectedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
+        <state relative-caret-position="182">
           <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1260,6 +1242,18 @@
             <element signature="method#check_graph#0;class#TestDirectedGraph#0" expanded="false" />
             <element signature="method#check_node#0;class#TestDirectedGraph#0" expanded="false" />
             <element signature="method#check_remove#0;class#TestDirectedGraph#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyGML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
           </folding>
         </state>
       </provider>
