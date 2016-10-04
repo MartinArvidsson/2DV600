@@ -24,10 +24,23 @@
       <file leaf-file-name="MyGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="1717">
               <caret line="107" column="13" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2250#2251#0" expanded="false" />
+                <element signature="e#2289#2290#0" expanded="false" />
+                <element signature="e#2350#2351#0" expanded="false" />
+                <element signature="e#2390#2391#0" expanded="false" />
+                <element signature="e#2448#2449#0" expanded="false" />
+                <element signature="e#2487#2488#0" expanded="false" />
+                <element signature="e#2535#2536#0" expanded="false" />
+                <element signature="e#2570#2571#0" expanded="false" />
+                <element signature="e#2628#2629#0" expanded="false" />
+                <element signature="e#2667#2668#0" expanded="false" />
+                <element signature="e#2715#2716#0" expanded="false" />
+                <element signature="e#2750#2751#0" expanded="false" />
+                <element signature="e#5557#5558#0" expanded="false" />
+                <element signature="e#5605#5606#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -36,9 +49,12 @@
       <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/graphs/DirectedGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
+            <state relative-caret-position="1972">
               <caret line="121" column="70" selection-start-line="121" selection-start-column="70" selection-end-line="121" selection-end-column="70" />
-              <folding />
+              <folding>
+                <element signature="e#0#4454#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,7 +65,18 @@
             <state relative-caret-position="4913">
               <caret line="305" column="28" selection-start-line="305" selection-start-column="28" selection-end-line="305" selection-end-column="28" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1285#1286#0" expanded="false" />
+                <element signature="e#1320#1321#0" expanded="false" />
+                <element signature="e#1372#1373#0" expanded="false" />
+                <element signature="e#1406#1407#0" expanded="false" />
+                <element signature="e#1455#1456#0" expanded="false" />
+                <element signature="e#1486#1487#0" expanded="false" />
+                <element signature="e#1533#1534#0" expanded="false" />
+                <element signature="e#1561#1562#0" expanded="false" />
+                <element signature="e#1616#1617#0" expanded="false" />
+                <element signature="e#1650#1651#0" expanded="false" />
+                <element signature="e#1687#1688#0" expanded="false" />
+                <element signature="e#1713#1714#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -61,16 +88,19 @@
             <state relative-caret-position="510">
               <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
               <folding>
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
-                <element signature="e#818#819#0" expanded="true" />
-                <element signature="e#861#862#0" expanded="true" />
-                <element signature="e#1104#1105#0" expanded="true" />
-                <element signature="e#1135#1136#0" expanded="true" />
-                <element signature="e#1296#1297#0" expanded="true" />
-                <element signature="e#1327#1328#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#622#623#0" expanded="false" />
+                <element signature="e#657#658#0" expanded="false" />
+                <element signature="e#717#718#0" expanded="false" />
+                <element signature="e#756#757#0" expanded="false" />
+                <element signature="e#908#909#0" expanded="false" />
+                <element signature="e#943#944#0" expanded="false" />
+                <element signature="e#1003#1004#0" expanded="false" />
+                <element signature="e#1042#1043#0" expanded="false" />
+                <element signature="e#1200#1201#0" expanded="false" />
+                <element signature="e#1234#1235#0" expanded="false" />
+                <element signature="e#1392#1393#0" expanded="false" />
+                <element signature="e#1426#1427#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -79,10 +109,11 @@
       <file leaf-file-name="TestDirectedGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/graphs/test/TestDirectedGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
+            <state relative-caret-position="493">
               <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1102#1103#0" expanded="false" />
+                <element signature="e#1163#1164#0" expanded="false" />
                 <element signature="method#testCreateAdd#0;class#TestDirectedGraph#0" expanded="false" />
                 <element signature="method#testRemove#0;class#TestDirectedGraph#0" expanded="false" />
                 <element signature="method#testExceptions#0;class#TestDirectedGraph#0" expanded="false" />
@@ -100,22 +131,30 @@
       <file leaf-file-name="directed_graph_[1].gml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/directed_graph_[1].gml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
+            <state relative-caret-position="85">
               <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGML.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyGML.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyGML.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
+            <state relative-caret-position="663">
               <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyDFS.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyDFS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#251#252#0" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,7 +220,6 @@
         <option value="$PROJECT_DIR$/src/graphs/test/TestAlgorithms.java" />
         <option value="$PROJECT_DIR$/src/ma223ku_assign3/myBFS.java" />
         <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyConnectedComponents.java" />
-        <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyDFS.java" />
         <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyTransitiveClosure.java" />
         <option value="$PROJECT_DIR$/src/graphs/test/TestDFS.java" />
         <option value="$PROJECT_DIR$/src/graphs/test/GeneratorMain.java" />
@@ -191,6 +229,7 @@
         <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyGraph.java" />
         <option value="$PROJECT_DIR$/directed_graph_[1].gml" />
         <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyGML.java" />
+        <option value="$PROJECT_DIR$/src/ma223ku_assign3/MyDFS.java" />
       </list>
     </option>
   </component>
@@ -232,8 +271,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -303,9 +345,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
       </pane>
     </panes>
   </component>
@@ -758,7 +797,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1790393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19213974" sideWeight="0.50625" order="10" side_tool="true" content_ui="tabs" />
@@ -768,13 +806,14 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.8597973" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.85262007" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5043668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.1402027" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.14737992" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1790393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1061,13 +1100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1075,35 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyDFS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1111,11 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1124,7 +1122,7 @@
         <state relative-caret-position="232">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1133,9 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1122">
           <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1143,7 +1138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,9 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1169,16 +1160,19 @@
         <state relative-caret-position="510">
           <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
           <folding>
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
-            <element signature="e#1296#1297#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#657#658#0" expanded="false" />
+            <element signature="e#717#718#0" expanded="false" />
+            <element signature="e#756#757#0" expanded="false" />
+            <element signature="e#908#909#0" expanded="false" />
+            <element signature="e#943#944#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
+            <element signature="e#1042#1043#0" expanded="false" />
+            <element signature="e#1200#1201#0" expanded="false" />
+            <element signature="e#1234#1235#0" expanded="false" />
+            <element signature="e#1392#1393#0" expanded="false" />
+            <element signature="e#1426#1427#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1188,7 +1182,18 @@
         <state relative-caret-position="4913">
           <caret line="305" column="28" selection-start-line="305" selection-start-column="28" selection-end-line="305" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="false" />
+            <element signature="e#1320#1321#0" expanded="false" />
+            <element signature="e#1372#1373#0" expanded="false" />
+            <element signature="e#1406#1407#0" expanded="false" />
+            <element signature="e#1455#1456#0" expanded="false" />
+            <element signature="e#1486#1487#0" expanded="false" />
+            <element signature="e#1533#1534#0" expanded="false" />
+            <element signature="e#1561#1562#0" expanded="false" />
+            <element signature="e#1616#1617#0" expanded="false" />
+            <element signature="e#1650#1651#0" expanded="false" />
+            <element signature="e#1687#1688#0" expanded="false" />
+            <element signature="e#1713#1714#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1197,31 +1202,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="125" column="19" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="1717">
           <caret line="107" column="13" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="false" />
+            <element signature="e#2289#2290#0" expanded="false" />
+            <element signature="e#2350#2351#0" expanded="false" />
+            <element signature="e#2390#2391#0" expanded="false" />
+            <element signature="e#2448#2449#0" expanded="false" />
+            <element signature="e#2487#2488#0" expanded="false" />
+            <element signature="e#2535#2536#0" expanded="false" />
+            <element signature="e#2570#2571#0" expanded="false" />
+            <element signature="e#2628#2629#0" expanded="false" />
+            <element signature="e#2667#2668#0" expanded="false" />
+            <element signature="e#2715#2716#0" expanded="false" />
+            <element signature="e#2750#2751#0" expanded="false" />
+            <element signature="e#5557#5558#0" expanded="false" />
+            <element signature="e#5605#5606#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graphs/DirectedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
+        <state relative-caret-position="1972">
           <caret line="121" column="70" selection-start-line="121" selection-start-column="70" selection-end-line="121" selection-end-column="70" />
-          <folding />
+          <folding>
+            <element signature="e#0#4454#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/directed_graph_[1].gml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
+        <state relative-caret-position="85">
           <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
           <folding />
         </state>
@@ -1229,10 +1249,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graphs/test/TestDirectedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
+        <state relative-caret-position="493">
           <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="false" />
+            <element signature="e#1163#1164#0" expanded="false" />
             <element signature="method#testCreateAdd#0;class#TestDirectedGraph#0" expanded="false" />
             <element signature="method#testRemove#0;class#TestDirectedGraph#0" expanded="false" />
             <element signature="method#testExceptions#0;class#TestDirectedGraph#0" expanded="false" />
@@ -1248,12 +1269,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyGML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
+        <state relative-caret-position="663">
           <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ma223ku_assign3/MyDFS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
           </folding>
         </state>
       </provider>
