@@ -34,11 +34,11 @@ public class MyDFS<E> implements DFS<E>
         while(nodeiterator.hasNext())
         {
             Node<E> item = nodeiterator.next();
-            item.num = nodes.size();
             if(!nodes.contains(item))
             {
                 nodes.add(item);
             }
+            nodes = dfs(item,nodes);
         }
         return nodes;
     }
@@ -79,7 +79,8 @@ public class MyDFS<E> implements DFS<E>
 
         while(nodeiterator.hasNext())
         {
-            nodes = postOrder(nodes,nodesvisited,nodeiterator.next());
+            Node<E> nextItem = nodeiterator.next();
+            nodes = postOrder(nodes,nodesvisited,nextItem);
         }
 
         return nodes;
