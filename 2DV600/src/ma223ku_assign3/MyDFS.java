@@ -3,13 +3,7 @@ package ma223ku_assign3;
 import graphs.DFS;
 import graphs.DirectedGraph;
 import graphs.Node;
-import org.w3c.dom.NodeList;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Martin on 2016-09-30.
@@ -34,10 +28,6 @@ public class MyDFS<E> implements DFS<E>
         while(nodeiterator.hasNext())
         {
             Node<E> item = nodeiterator.next();
-            if(!nodes.contains(item))
-            {
-                nodes.add(item);
-            }
             nodes = dfs(item,nodes);
         }
         return nodes;
@@ -47,8 +37,10 @@ public class MyDFS<E> implements DFS<E>
     {
         Iterator<Node<E>> nodeiterator = root.succsOf();
         root.num = nodelist.size();
-        nodelist.add(root);
-
+        if(!nodelist.contains(root))
+        {
+            nodelist.add(root);
+        }
         while(nodeiterator.hasNext())
         {
             Node<E> nextItem = nodeiterator.next();

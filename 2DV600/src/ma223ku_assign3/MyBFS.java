@@ -39,8 +39,10 @@ public class MyBFS<E> implements BFS<E>
             Node<E> nextitem = iterator.next();
             if(!visitednodes.contains(nextitem))
             {
+                nextitem.num = visitednodes.size();
                 visitednodes.add(nextitem);
                 nodeset.add(nextitem);
+                nodes.add(nextitem);
                 nodes = bfs(nodes,visitednodes,nodeset);
             }
         }
@@ -52,21 +54,27 @@ public class MyBFS<E> implements BFS<E>
     {
         Iterator<Node<E>> iterator = nodeset.iterator();
         HashSet<Node<E>> newset = new HashSet<>();
-        for(Node<E> item : nodeset)
-        {
-            if(!visitednodes.contains(item))
-            {
-                visitednodes.add(item);
-            }
-        }
         while(iterator.hasNext())
         {
             Node<E> nextitem = iterator.next();
-            if (!nodeset.contains(nextitem) || !visitednodes.contains(nextitem))
+            if(!visitednodes.contains(nextitem))
             {
-                newset.add(nextitem);
+                nextitem.num = visitednodes.size();
+                visitednodes.add(nextitem);
                 nodelist.add(nextitem);
             }
+            Iterator<Node<E>> succsiterator = nextitem.succsOf();
+            while (succsiterator.hasNext())
+            {
+                Node<E> successor = succsiterator.next();
+                if(!visitednodes.contains(successor))
+                {
+                    newset.add(successor);
+                }
+            }
+        }
+        if(!newset.isEmpty())
+        {
             bfs(nodelist,visitednodes,newset);
         }
         return nodelist;
