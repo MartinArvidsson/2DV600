@@ -15,13 +15,13 @@ public class BenchmarkMain {
 		
 		
 		double time = 0.0;
-		
+
 		time += gbm.runGraphPerformance();
 		
 		time += gbm.runDfsBfs();
 		
 	    time += gbm.runTransitiveClosure();
-	    
+
 	    time += gbm.runConnectedComponents();
 	    
 	    System.out.println("Total Time: "+time);
