@@ -14,16 +14,15 @@ public class MyDFS<E> implements DFS<E>
     @Override
     public List<Node<E>> dfs(DirectedGraph<E> graph, Node<E> root)
     {
-        List<Node<E>> nodes = new ArrayList<>();
-        root = graph.getNodeFor(root.item());
+        List<Node<E>> nodes = new ArrayList<>(); //For storing the nodes found
         return dfs(root,nodes);
     }
 
     @Override
     public List<Node<E>> dfs(DirectedGraph<E> graph)
     {
-        List<Node<E>> nodes = new ArrayList<>();
-        Iterator<Node<E>> nodeiterator = graph.heads();
+        List<Node<E>> nodes = new ArrayList<>();//Storage of the nodes.
+        Iterator<Node<E>> nodeiterator = graph.heads(); //Since no root node is provided, iterate all heads instead.
 
         while(nodeiterator.hasNext())
         {
@@ -35,13 +34,13 @@ public class MyDFS<E> implements DFS<E>
 
     private List<Node<E>> dfs(Node root,List<Node<E>> nodelist)
     {
-        Iterator<Node<E>> nodeiterator = root.succsOf();
-        root.num = nodelist.size();
-        if(!nodelist.contains(root))
+        Iterator<Node<E>> nodeiterator = root.succsOf(); //Find all sucessors of the startnode
+        root.num = nodelist.size(); //Add a number to the node
+        if(!nodelist.contains(root))//If the node hasn't been added , add it to the list.
         {
             nodelist.add(root);
         }
-        while(nodeiterator.hasNext())
+        while(nodeiterator.hasNext()) //While the node has sucessors, repeat the process until no more sucessors can be found.
         {
             Node<E> nextItem = nodeiterator.next();
             if(!nodelist.contains(nextItem))
@@ -57,7 +56,6 @@ public class MyDFS<E> implements DFS<E>
     {
         ArrayList<Node<E>> nodes = new ArrayList<>();
         ArrayList<Node<E>> nodesvisited = new ArrayList<>();
-        root = g.getNodeFor(root.item());
 
         return postOrder(nodes,nodesvisited,root);
     }
@@ -69,7 +67,7 @@ public class MyDFS<E> implements DFS<E>
         List<Node<E>> nodesvisited = new ArrayList<>();
         Iterator<Node<E>> nodeiterator = g.heads();
 
-        while(nodeiterator.hasNext())
+        while(nodeiterator.hasNext()) //No root provided, iterate heads instead.
         {
             Node<E> nextItem = nodeiterator.next();
             nodes = postOrder(nodes,nodesvisited,nextItem);
@@ -81,18 +79,18 @@ public class MyDFS<E> implements DFS<E>
     @Override
     public List<Node<E>> postOrder(DirectedGraph<E> g, boolean attach_dfs_number)
     {
-        //Fixa sen
+        //Fixa
         return null;
     }
 
 
     private List<Node<E>> postOrder(List<Node<E>> nodes,List<Node<E>> visitednodes,Node<E> root)
     {
-        if(!visitednodes.contains(root))
+        if(!visitednodes.contains(root))//IF the node hasn't been visited
         {
-            Iterator<Node<E>> nodeiterator = root.succsOf();
-            visitednodes.add(root);
-            while(nodeiterator.hasNext())
+            Iterator<Node<E>> nodeiterator = root.succsOf(); //Iterate sucessors
+            visitednodes.add(root); //And add the sourcenode to visited
+            while(nodeiterator.hasNext())//While there are successors, keep iterating
             {
                 Node<E> nextitem = nodeiterator.next();
                 if(!nodes.contains(nextitem))
@@ -100,7 +98,7 @@ public class MyDFS<E> implements DFS<E>
                     postOrder(nodes,visitednodes,nextitem);
                 }
             }
-            root.num = nodes.size() +1;
+            root.num = nodes.size();
             nodes.add(root);
         }
         return nodes;
@@ -109,10 +107,10 @@ public class MyDFS<E> implements DFS<E>
     @Override
     public boolean isCyclic(DirectedGraph<E> graph)
     {
-        for(E item : graph.allItems())
+        for(E item : graph.allItems()) //Check all items in the graph
         {
             Node<E> _node = graph.getNodeFor(item);
-            Iterator iterator = _node.succsOf();
+            Iterator iterator = _node.succsOf(); //Takes a node and then checks it's sucessors, if a sucoessor is the same as the root, return TRUE
             while(iterator.hasNext())
             {
                 if(iterator.next() == _node)
@@ -136,7 +134,7 @@ public class MyDFS<E> implements DFS<E>
             nodes = postOrder(nodes,nodesvisited,nodeiterator.next());
         }
 
-        Collections.reverse(nodes);
+        Collections.reverse(nodes); //Not the most creative solution, Do a postOrder of the heads and reverse it after with collections.reverse
         return nodes;
     }
 }

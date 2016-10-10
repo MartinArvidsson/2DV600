@@ -17,7 +17,7 @@ public class MyGML<E> extends GML<E>
     }
 
     @Override
-    public String toGML()
+    public String toGML() //Creates a GML file with correct spacing
     {
         String toReturn = "";
         int id = 1;

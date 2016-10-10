@@ -57,11 +57,11 @@ graph [
 	]
 	edge [
 		source 5
-		target 6
+		target 7
 	]
 	edge [
 		source 5
-		target 7
+		target 6
 	]
 	edge [
 		source 6

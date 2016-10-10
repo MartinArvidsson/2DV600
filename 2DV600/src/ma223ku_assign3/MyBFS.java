@@ -29,15 +29,15 @@ public class MyBFS<E> implements BFS<E>
     @Override
     public List<Node<E>> bfs(DirectedGraph<E> graph)
     {
-        List<Node<E>> nodes = new ArrayList<>();
-        List<Node<E>> visitednodes = new ArrayList<>();
+        List<Node<E>> nodes = new ArrayList<>(); //Stores nodes to return
+        List<Node<E>> visitednodes = new ArrayList<>(); // Mark a node as visited
         HashSet<Node<E>> nodeset = new HashSet<>();
 
-        Iterator<Node<E>> iterator = graph.heads();
+        Iterator<Node<E>> iterator = graph.heads(); //Iterate over heads
         while(iterator.hasNext())
         {
             Node<E> nextitem = iterator.next();
-            if(!visitednodes.contains(nextitem))
+            if(!visitednodes.contains(nextitem)) //If the node hasn't been visited before
             {
                 nextitem.num = visitednodes.size();
                 visitednodes.add(nextitem);
@@ -54,26 +54,26 @@ public class MyBFS<E> implements BFS<E>
     {
         Iterator<Node<E>> iterator = nodeset.iterator();
         HashSet<Node<E>> newset = new HashSet<>();
-        while(iterator.hasNext())
+        while(iterator.hasNext()) //Iterate over all items in the nodeset,
         {
             Node<E> nextitem = iterator.next();
-            if(!visitednodes.contains(nextitem))
+            if(!visitednodes.contains(nextitem)) //If the item hasn't been visited
             {
                 nextitem.num = visitednodes.size();
-                visitednodes.add(nextitem);
-                nodelist.add(nextitem);
+                visitednodes.add(nextitem); //Add it to visited to mark it so it doesn't get visited twice
+                nodelist.add(nextitem); //Add it to the list to return
             }
             Iterator<Node<E>> succsiterator = nextitem.succsOf();
-            while (succsiterator.hasNext())
+            while (succsiterator.hasNext()) //Check sucessors of the node
             {
                 Node<E> successor = succsiterator.next();
-                if(!visitednodes.contains(successor))
+                if(!visitednodes.contains(successor)) //If the node hasn't been visited, add it to a new set to iterate
                 {
                     newset.add(successor);
                 }
             }
         }
-        if(!newset.isEmpty())
+        if(!newset.isEmpty()) //Keep iterating until no more sucessors are found
         {
             bfs(nodelist,visitednodes,newset);
         }

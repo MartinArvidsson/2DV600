@@ -22,7 +22,7 @@ public class MyGraph<E> implements DirectedGraph<E>
     }
 
     @Override
-    public Node addNodeFor(E item)
+    public Node addNodeFor(E item) //Try adding a node to the graph
     {
         if(item == null)
         {
@@ -42,7 +42,7 @@ public class MyGraph<E> implements DirectedGraph<E>
     }
 
     @Override
-    public Node getNodeFor(Object item)
+    public Node getNodeFor(Object item) //Try to find the provided item in the graph
     {
 
         if(item == null)
@@ -64,7 +64,7 @@ public class MyGraph<E> implements DirectedGraph<E>
     }
     @SuppressWarnings("unchecked cast")
     @Override
-    public boolean addEdgeFor(E from, E to)
+    public boolean addEdgeFor(E from, E to) //Try to add an edge between two nodes
     {
         if(from == null || to == null)
         {
@@ -74,11 +74,11 @@ public class MyGraph<E> implements DirectedGraph<E>
         MyNode<E> source = (MyNode<E>)addNodeFor(from);
         MyNode<E> target = (MyNode<E>)addNodeFor(to);
 
-        if(source.hasSucc(target))
+        if(source.hasSucc(target)) //If the connection already exists
         {
             return false;
         }
-        else
+        else //Add the edge
         {
             source.addSucc(target);
             target.addPred(source);
@@ -90,7 +90,7 @@ public class MyGraph<E> implements DirectedGraph<E>
     }
 
     @Override
-    public boolean containsNodeFor(Object item)
+    public boolean containsNodeFor(Object item) //Try to find the item, true if it exists in the graph
     {
         if(item == null)
         {
@@ -147,7 +147,7 @@ public class MyGraph<E> implements DirectedGraph<E>
     }
 
     @Override
-    public int edgeCount()
+    public int edgeCount() //Count all nodes sucessors and add them together returns the value of edges.
     {
         int numberofedges = 0;
 
@@ -160,15 +160,16 @@ public class MyGraph<E> implements DirectedGraph<E>
     }
 
     @Override
-    public void removeNodeFor(Object item)
+    public void removeNodeFor(Object item) //Try to remove the object from the graph
     {
-        if(item == null && item2node.get(item) == null)
+        if(item == null && item2node.get(item) == null) //Exception if Object isn't valid
         {
             throw new RuntimeException("Null as input");
         }
 
-        MyNode toremove = item2node.get(item);
-        if(toremove.isHead())
+        MyNode toremove = item2node.get(item); //Get the node
+
+        if(toremove.isHead()) //If head/Tail remove from the list
         {
             heads.remove(item);
         }
@@ -177,7 +178,7 @@ public class MyGraph<E> implements DirectedGraph<E>
             tails.remove(item);
         }
 
-        for(MyNode node: item2node.values())
+        for(MyNode node: item2node.values()) //check all nodes if they have the item to be removed as pred or succ, if they do remove
         {
             if(node.hasPred(toremove))
             {
@@ -196,14 +197,14 @@ public class MyGraph<E> implements DirectedGraph<E>
                 }
             }
         }
-        toremove.disconnect();
-        item2node.remove(item);
+        toremove.disconnect(); //Node Disconnect function
+        item2node.remove(item); //Remove item from graph
     }
 
     @Override
-    public boolean containsEdgeFor(Object from, Object to)
+    public boolean containsEdgeFor(Object from, Object to) //Is there a existing node between the provided parameters
     {
-        if(from == null || to == null)
+        if(from == null || to == null) //Exception if anyone is null
         {
             throw new IndexOutOfBoundsException();
         }
@@ -216,20 +217,20 @@ public class MyGraph<E> implements DirectedGraph<E>
     }
 
     @Override
-    public boolean removeEdgeFor(Object from, Object to)
+    public boolean removeEdgeFor(Object from, Object to) //Remove edge between two objects
     {
         if(from == null || to == null)
         {
             throw new RuntimeException("Recieved null as input");
         }
-        if(containsEdgeFor(from,to))
+        if(containsEdgeFor(from,to)) //If an edge exists between two items
         {
-            MyNode _from = item2node.get(from);
+            MyNode _from = item2node.get(from); //Remove connection between the nodes
             MyNode _to = item2node.get(to);
             _from.removeSucc(_to);
             _to.removePred(_from);
 
-            if(_from.isTail())
+            if(_from.isTail()) //if the node is a tail and not added to the list of tails add it
             {
                 if(!tails.contains(_from))
                 {
@@ -237,7 +238,7 @@ public class MyGraph<E> implements DirectedGraph<E>
                 }
             }
 
-            if(_to.isHead())
+            if(_to.isHead()) //if the node is a head and not added to the list of heads add it.
             {
                 if(!heads.contains(_to))
                 {
@@ -253,7 +254,7 @@ public class MyGraph<E> implements DirectedGraph<E>
 
     private class mapiterator implements Iterator<Node<E>>
     {
-        Iterator iterator = item2node.values().iterator();
+        Iterator iterator = item2node.values().iterator(); //Iterate the map
 
         @Override
         public boolean hasNext()

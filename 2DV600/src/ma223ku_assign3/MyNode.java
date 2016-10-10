@@ -89,14 +89,14 @@ public class MyNode<E> extends Node<E>
     @Override
     protected void disconnect()
     {
-        Iterator iterator = predsOf();
+        Iterator iterator = predsOf(); //Iterate over all preds and remove this node as a sucessor
         while(iterator.hasNext())
         {
             MyNode<E> node = (MyNode<E>)iterator.next();
             node.removeSucc(this);
         }
 
-        Iterator _iterator = succsOf();
+        Iterator _iterator = succsOf(); //Iterate over all succs and remove this node as a pred
 
         while(_iterator.hasNext())
         {
@@ -104,7 +104,7 @@ public class MyNode<E> extends Node<E>
             node.removePred(this);
 
         }
-
+        //Removes all preds and sucs.
         preds.clear();
         succs.clear();
     }
