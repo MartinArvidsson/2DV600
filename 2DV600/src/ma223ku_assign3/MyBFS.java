@@ -33,18 +33,30 @@ public class MyBFS<E> implements BFS<E>
         List<Node<E>> visitednodes = new ArrayList<>(); // Mark a node as visited
         HashSet<Node<E>> nodeset = new HashSet<>();
 
-        Iterator<Node<E>> iterator = graph.heads(); //Iterate over heads
-        while(iterator.hasNext())
+        if(graph.headCount() > 0)
         {
-            Node<E> nextitem = iterator.next();
-            if(!visitednodes.contains(nextitem)) //If the node hasn't been visited before
+            Iterator<Node<E>> iterator = graph.heads(); //Iterate over heads
+            while(iterator.hasNext())
             {
-                nextitem.num = visitednodes.size();
-                visitednodes.add(nextitem);
-                nodeset.add(nextitem);
-                nodes.add(nextitem);
-                nodes = bfs(nodes,visitednodes,nodeset);
+                Node<E> nextitem = iterator.next();
+                if(!visitednodes.contains(nextitem)) //If the node hasn't been visited before
+                {
+                    nextitem.num = visitednodes.size();
+                    visitednodes.add(nextitem);
+                    nodeset.add(nextitem);
+                    nodes.add(nextitem);
+                    nodes = bfs(nodes,visitednodes,nodeset);
+                }
             }
+        }
+        else
+        {
+            Node<E> _nextItem = graph.getNodeFor(graph.allItems().get(0));
+            _nextItem.num = visitednodes.size();
+            visitednodes.add(_nextItem);
+            nodeset.add(_nextItem);
+            nodes.add(_nextItem);
+            nodes = bfs(nodes,visitednodes,nodeset);
         }
 
         return nodes;

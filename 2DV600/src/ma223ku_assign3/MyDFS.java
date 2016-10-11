@@ -22,12 +22,19 @@ public class MyDFS<E> implements DFS<E>
     public List<Node<E>> dfs(DirectedGraph<E> graph)
     {
         List<Node<E>> nodes = new ArrayList<>();//Storage of the nodes.
-        Iterator<Node<E>> nodeiterator = graph.heads(); //Since no root node is provided, iterate all heads instead.
-
-        while(nodeiterator.hasNext())
+        if(graph.headCount() > 0)
         {
-            Node<E> item = nodeiterator.next();
-            nodes = dfs(item,nodes);
+            Iterator<Node<E>> nodeiterator = graph.heads(); //Since no root node is provided, iterate all heads instead.
+            while(nodeiterator.hasNext()) //Iterate heads if avalible, else specific node
+            {
+                Node<E> nextItem = nodeiterator.next();
+                nodes = dfs(nextItem,nodes);
+            }
+        }
+        else
+        {
+            Node<E> _nextItem = graph.getNodeFor(graph.allItems().get(0));
+            nodes = dfs(_nextItem,nodes);
         }
         return nodes;
     }
@@ -65,13 +72,23 @@ public class MyDFS<E> implements DFS<E>
     {
         List<Node<E>> nodes = new ArrayList<>();
         List<Node<E>> nodesvisited = new ArrayList<>();
-        Iterator<Node<E>> nodeiterator = g.heads();
-
-        while(nodeiterator.hasNext()) //No root provided, iterate heads instead.
+        if(g.headCount() > 0)
         {
-            Node<E> nextItem = nodeiterator.next();
-            nodes = postOrder(nodes,nodesvisited,nextItem);
+            Iterator<Node<E>> nodeiterator = g.heads();
+            while(nodeiterator.hasNext()) //Iterate heads if avalible, else specific node
+            {
+                Node<E> nextItem = nodeiterator.next();
+                nodes = postOrder(nodes,nodesvisited,nextItem);
+
+            }
         }
+        else
+        {
+
+            Node<E> _nextItem = g.getNodeFor(g.allItems().get(0));
+            nodes = postOrder(nodes,nodesvisited,_nextItem);
+        }
+
 
         return nodes;
     }
@@ -127,11 +144,19 @@ public class MyDFS<E> implements DFS<E>
     {
         List<Node<E>> nodes = new ArrayList<>();
         ArrayList<Node<E>> nodesvisited = new ArrayList<>();
-        Iterator<Node<E>> nodeiterator = graph.heads();
 
-        while(nodeiterator.hasNext())
+        if(graph.headCount() > 0)
         {
-            nodes = postOrder(nodes,nodesvisited,nodeiterator.next());
+            Iterator<Node<E>> nodeiterator = graph.heads(); //Since no root node is provided, iterate all heads instead.
+            while(nodeiterator.hasNext())
+            {
+                nodes = postOrder(nodes,nodesvisited,nodeiterator.next());
+            }
+        }
+        else
+        {
+            Node<E> _nextItem = graph.getNodeFor(graph.allItems().get(0));
+            nodes = postOrder(nodes,nodesvisited,_nextItem);
         }
 
         Collections.reverse(nodes); //Not the most creative solution, Do a postOrder of the heads and reverse it after with collections.reverse

@@ -1,0 +1,118 @@
+http://bigocheatsheet.com/
+http://homepage.lnu.se/staff/jlnmsi/fost/lectures/TimeCompl.pdf
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DFS
+
+New list //O(1)
+if(graph.heads >0) //O(1)
+    New Iterator for heads // O(1)
+    while headsiterator has next // O(N)
+        Headnode = next item in iterator // O(1)
+        Call to DFS fucntion with headnode // O(1)
+else // O(1)
+    Take first item in graph and use it for dfs call // O(1)
+    Call to DFS function with the node taken from the graph // O(1)
+
+
+DFS Function
+
+Iterator for successors// O(1)
+Give node a number// O(1)
+if nodelist doesnt contain current node // O(1)
+    add node// O(1)
+    while iterator has next // O(S)
+        new node as next// O(1)
+        if nodelist does not contain the new node // O(1)
+            recursive dfs call with new node // O(1)
+return the list// O(1)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BFS
+
+New list Nodes// O(1)
+New list Visitednodes // O(1)
+New Hashset nodeset// O(1)
+
+if heads > 0// O(1)
+    Iterator heads // O(1)
+    While // O(H)
+        NextItem // O(1)
+        if // O(1)
+            Number // O(1)
+            Add node // O(1)
+            Add to set // O(1)
+            Add to list // O(1)
+            Call to BFS recursive // O(1)
+else // O(1)
+    get first item // O(1)
+    give number // O(1)
+    add node // O(1)
+    add to set // O(1)
+    add to list // O(1)
+    call to recursive BFS // O(1)
+
+
+Recursive BFS
+
+New iterator Nodeset// O(1)
+new hashset // O(1)
+while nodeset iterator// O(NS)
+    nextitem // O(1)
+    if // O(1)
+        give number // O(1)
+        add to list // O(1)
+        add to list // O(1)
+    new iterator sucessors // O(1)
+    while successors // O(sc)
+        new node // O(1)
+        if // O(1)
+        add to set // O(1)
+if // O(1)
+call to recursive BFS // O(1)
+return // O(1)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Transitive Closure
+
+New map // O(1)
+new DFS // O(1)
+new Iterator // O(1)
+While // O(N)
+    new item // O(1)
+    Call to DFS from item // O(1)
+    add item to map // O(1)
+return map // O(1)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ConnectedComponents
+
+New Collection // O(1)
+new list // O(1)
+New Hashset // O(1)
+new Hashset // O(1)
+new Boolean visited// O(1)
+
+new DFS // O(1)
+
+New Iterator // O(1)
+While hasNext// O(N)
+    visited = false // O(1)
+    new node on iterator.next // O(1)
+    if not visited // O(1)
+        dfs call on node // O(1)
+        for node in returned dfs call // O(N)
+            if any items has been visited // O(1)
+                for all collections // O(N)
+                    if collection contains item // O(1)
+                        visited = true // O(1)
+                        add all items to visitedlist // O(1)
+                        add all to collection // O(1)
+        if visited = false // O(1)
+            add all to visitedlist // O(1)
+            new hashset // O(1)
+            add all to new set // O(1)
+            add set to collection// O(1)
+        add item to visitedlist // O(1)
+    return // O(1)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
